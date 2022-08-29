@@ -1,0 +1,2 @@
+class InjuryLocation < ApplicationRecord
+end
