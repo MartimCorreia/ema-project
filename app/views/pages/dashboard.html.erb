@@ -20,13 +20,13 @@
         <% @user.treatments.each do |treatment| %>
           <%= button_to "##{treatment.id}. --------------- #{treatment.created_at}", treatment_path(treatment) %>
         <% end %>
-        <hr>
+          <hr>
       </div>
     </div>
+
   </div>
 
   <div class="start-treatment text-center">
     <%= button_to "New treatment", treatment_index_path%>
   </div>
 </div>
-
