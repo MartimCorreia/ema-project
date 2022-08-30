@@ -15,12 +15,13 @@
     <div class="container">
       <div class="row">
         <div class="col-sm-12 p-0">
-        <% if action_name == "new" && controller_name == "session"? %>
-          
-        <% end %>
-          <%= render "shared/navbar" %>
-          <%= render "shared/flashes" %>
 
+
+<div id="wrapper">
+  <% unless controller_name == 'sessions' && action_name == 'new'%>
+      <%= render "shared/navbar" %>
+  <% end %>
+          <%= render "shared/flashes" %>
           <%= yield %>
         </div>
       </div>
