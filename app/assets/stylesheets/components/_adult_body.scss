@@ -1,7 +1,12 @@
 .adult-body img{
   width: 200px;
+  position: relative;
 }
 
-.long-line{
-  font-size: 80px;
+.long-line img{
+  width: 200px;
+  position: relative;
+  top: -430px;
+  left: 20px;
+  // opacity: 0;
 }

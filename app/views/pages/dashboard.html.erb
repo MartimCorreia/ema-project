@@ -19,7 +19,7 @@
           <div class="my-procedures col-sm-1 col-md-12">
             <h1>My procedures</h1>
             <% @user.treatments.each do |treatment| %>
-              <%= link_to "##{treatment.id}. --------------- #{treatment.created_at}", treatment_path(treatment) %>
+              <%= link_to "##{treatment.id}. ----- #{treatment.created_at}", treatment_path(treatment) %>
             <% end %>
               <hr>
           </div>
