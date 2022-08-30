@@ -1,28 +1,36 @@
 <div class="bg-color">
-  <div class="simple-form d-flex justify-content-center">
+  <div class="top-container d-flex justify-content-center align-items-center">
+    <div class="outer-box d-flex justify-content-center align-items-center">
+      <h1 class="ema-h1">EMA</h1>
+      <%= image_tag "EMA-logo.png", class:"ema-logo ms-4" %>
+    </div>
+  </div>
+    <h4 class="text-end me-5 mb-5"><em>Think less ACT Fast</em></h4>
+
+  <div class="d-flex flex-column justify-content-around align-items-center">
+    <div class="simple-form ">
       <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name), data: { turbo: :false }) do |f| %>
         <h2 class="text-center">Log in</h2>
-          <div class="form-inputs">
-            <%= f.input :email,
-                        required: false,
-                        autofocus: true,
-                        input_html: { autocomplete: "email" } %>
-            <%= f.input :password,
-                        required: false,
-                        input_html: { autocomplete: "current-password" } %>
-            <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %>
-
+        <div class="form-inputs">
+          <%= f.input :email,
+                      required: false,
+                      autofocus: true,
+                      input_html: { autocomplete: "email" } %>
+          <%= f.input :password,
+                      required: false,
+                      input_html: { autocomplete: "current-password" } %>
+          <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %>
           <div class="form-actions">
             <%= f.button :submit, "Log in" %>
           </div>
-        <% end %>
 
-      <%= render "devise/shared/links" %>
+          <%= render "devise/shared/links" %>
+        </div>
+      <% end %>
     </div>
-  </div>
 
-
-  <div class="d-flex justify-content-center ema-logo2">
-    <%= image_tag "EMA-logo2.png" %>
+    <div class="ema-logo2 align-self-items-end">
+      <%= image_tag "EMA-logo2.png" %>
+    </div>
   </div>
 </div>
