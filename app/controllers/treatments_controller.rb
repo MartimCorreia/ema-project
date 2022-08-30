@@ -1,5 +1,7 @@
 class TreatmentsController < ApplicationController
   def index
+    #get all treatments
+    #start building the patient
   end
 
   def show
