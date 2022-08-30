@@ -1,29 +1,30 @@
 <div class="container d-flex flex-column">
-
   <div class="tab_box">
     <div class="category-tab">
       <h1>Dashboard</h1>
     </div>
   </div>
-  <div class="d-flex justify-content-around m-5">
-    <div class="row">
-      <div class="user-info col-sm-1 col-md-12 ">
-        <h2>User info.</h2>
-          <ul>
-            <li>Id: <%= @user.id %></li>
-            <li>Full Name: <%=@user.first_name %> <%=@user.last_name %></li>
-          </ul>
+  <div class="dashboard-content d-flex justify-content-evenly">
+    <div class="d-flex justify-content-around m-5">
+      <div class="row">
+        <div class="user-info col-sm-1 col-md-12 ">
+          <h2>User info.</h2>
+            <ul>
+              <li>Id: <%= @user.id %></li>
+              <li>Full Name: <%=@user.first_name %> <%=@user.last_name %></li>
+            </ul>
+        </div>
+        <hr>
+        <div class="my-procedures col-sm-1 col-md-12">
+          <h1>My procedures</h1>
+          <% @user.treatments.each do |treatment| %>
+            <%= button_to "##{treatment.id}. --------------- #{treatment.created_at}", treatment_path(treatment) %>
+          <% end %>
+            <hr>
+        </div>
       </div>
-      <hr>
-      <div class="my-procedures col-sm-1 col-md-12">
-        <h1>My procedures</h1>
-        <% @user.treatments.each do |treatment| %>
-          <%= button_to "##{treatment.id}. --------------- #{treatment.created_at}", treatment_path(treatment) %>
-        <% end %>
-          <hr>
-      </div>
-    </div>
 
+    </div>
   </div>
 
   <div class="start-treatment text-center">
