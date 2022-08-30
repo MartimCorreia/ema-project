@@ -1,0 +1,15 @@
+<div class="container d-flex flex-column dashbody">
+ <div class="tab_box">
+    <div class="category-tab">
+      <h1>Injury Location</h1>
+    </div>
+  </div>
+
+  <div class="adult-body d-flex justify-content-center mt-4">
+    <%= image_tag "adult.png" %>
+  </div>
+
+  <%= link_to  treatments_path(location: "arm") do %>
+    <i class="fa-solid fa-grip-lines-vertical long-line"></i>
+  <% end %>
+</div>
