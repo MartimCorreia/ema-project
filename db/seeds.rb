@@ -15,19 +15,19 @@ InjuryType.destroy_all
 InjuryLocation.destroy_all
 
 puts "creating injury locations..."
-il1 = InjuryLocation.new(name:"Head")
+il1 = InjuryLocation.new(name:"head")
 il1.save
 
-il2 = InjuryLocation.new(name:"Torax")
+il2 = InjuryLocation.new(name:"torax")
 il2.save
 
-il3 = InjuryLocation.new(name:"Abdomen")
+il3 = InjuryLocation.new(name:"abdomen")
 il3.save
 
-il4 = InjuryLocation.new(name:"Leg")
+il4 = InjuryLocation.new(name:"leg")
 il4.save
 
-il5 = InjuryLocation.new(name:"Arm")
+il5 = InjuryLocation.new(name:"arm")
 il5.save
 puts "Done."
 
@@ -97,22 +97,22 @@ puts "Done."
 
 puts "creating treatments..."
 file = URI.open("https://res.cloudinary.com/dluisdviu/image/upload/v1661865793/EMA/dispneia_sgq94q.png")
-t1 = Treatment.new(age_group: "child", content: "Protocolo", injury_location: il1, injury_type: it1, condition: c1)
+t1 = Treatment.new(age_group: "child", content: "Protocolo", injury_location_id: il1.id, injury_type_id: it1.id, condition_id: c1.id)
 t1.photo.attach(io: file, filename: "Dyspneia.png", content_type:"image/png")
 t1.save
 
 file = URI.open("https://res.cloudinary.com/dluisdviu/image/upload/v1661865797/EMA/dor_toracica_iahwlf.png")
-t2 = Treatment.new(age_group: "adult", content: "Protocolo", injury_location: il1, injury_type: it1, condition: c2)
+t2 = Treatment.new(age_group: "adult", content: "Protocolo", injury_location_id: il1.id, injury_type_id: it1.id, condition_id: c2.id)
 t2.photo.attach(io: file, filename: "Chest_pain", content_type:"image/png")
 t2.save
 
 file = URI.open("https://res.cloudinary.com/dluisdviu/image/upload/v1661865808/EMA/traumatismos_wrhjop.png")
-t3 = Treatment.new(age_group: "adult", content: "Protocolo", injury_location: il2, injury_type: it2, condition: c3)
+t3 = Treatment.new(age_group: "adult", content: "Protocolo", injury_location_id: il2.id, injury_type_id: it2.id, condition_id: c3.id)
 t3.photo.attach(io: file, filename: "Fracture", content_type:"image/png")
 t3.save
 
 file = URI.open("https://res.cloudinary.com/dluisdviu/image/upload/v1661865803/EMA/queimaduras_ecksrl.png")
-t4 = Treatment.new(age_group: "child", content: "Protocolo", injury_location: il3, injury_type: it2, condition: c4)
+t4 = Treatment.new(age_group: "child", content: "Protocolo", injury_location_id: il3.id, injury_type_id: it2.id, condition_id: c4.id)
 t4.photo.attach(io: file, filename: "Burn", content_type:"image/png")
 t4.save
 puts "Done."
