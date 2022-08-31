@@ -1,35 +1,35 @@
-<div class="container d-flex flex-column dashbody">
+<div class="container d-flex flex-column dashbody p-0">
   <div class="tab_box">
-    <div class="category-tab">
-      <h1>Dashboard</h1>
+    <div class="profile-box mt-2">
+      <%= image_tag "place-holder.jpg", class:"avatar-place-holder" %>
     </div>
   </div>
-  <div class="position-dash-content d-flex flex-column justify-content-between">
+  <div class="position-dash-content d-flex flex-column">
     <div class="dashboard-content">
-      <div class="d-flex justify-content-around m-5">
+      <div class="d-flex justify-content-around info-box">
         <div class="row">
           <div class="user-info col-sm-1 col-md-12 ">
-            <h2>User info.</h2>
-              <ul>
-                <li>Id: <%= @user.id %></li>
-                <li>Full Name: <%=@user.first_name %> <%=@user.last_name %></li>
-              </ul>
-          </div>
-          <hr>
-          <div class="my-procedures col-sm-1 col-md-12">
-            <h1>My procedures</h1>
-            <% @user.treatments.each do |treatment| %>
-              <%= link_to "##{treatment.id}. ----- #{treatment.created_at}", treatment_path(treatment) %>
-            <% end %>
-              <hr>
+            <h1 class="text-center dr-h1">Dr.<%=@user.first_name %> <%=@user.last_name %></h1>
+            <h6 class="text-center id-h6">Id: <%= @user.id %></h6>
           </div>
         </div>
-
       </div>
     </div>
-
+    <hr>
     <div class="start-treatment text-center">
-      <%= link_to "New treatment", treatments_path%>
+      <%= link_to "New treatment", treatments_path, class:"new-treatment-btn"%>
+    </div>
+    <div class="box d-flex justify-content-center">
+      <h3 class="text-center procedures-icon mt-4">My procedures</h3>
+    </div>
+    <div class="my-procedures col-sm-1 col-md-12 d-flex justify-content-center procedures-box">
+      <ul>
+        <% @user.treatments.each do |treatment| %>
+          <li>
+            <%= link_to "##{treatment.id}. ----- #{treatment.created_at}", treatment_path(treatment) %>
+          </li>
+        <% end %>
+      </ul>
     </div>
   </div>
 </div>
