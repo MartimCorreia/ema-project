@@ -1,6 +1,7 @@
 .adult-body img{
   width: 200px;
   position: relative;
+  z-index: -1;
 }
 
 .long-line{
@@ -8,8 +9,7 @@
   background-color: black;
   width: 30px;
   height: 200px;
-  position: relative;
-  top: -420px;
-  left: 100px;
+  position: relative;~
+  
   //opacity: 0;
 }

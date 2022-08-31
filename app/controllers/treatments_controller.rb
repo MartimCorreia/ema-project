@@ -16,7 +16,9 @@ class TreatmentsController < ApplicationController
     @phase3 = @phase2.where(injury_type_id: params[:type])
     #filter treatments by condition
     @phase4 = @phase3.where(condition_id: params[:condition])
-    if !params[:age_group].nil?
+    if !params[:age_group].nil? && !params[:location].nil?
+    render "index_type"
+    elsif !params[:age_group].nil?
       render "index_location"
     else
       render "index_age"
