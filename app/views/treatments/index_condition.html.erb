@@ -1,0 +1,19 @@
+<div class="container d-flex flex-column">
+  <div class="tab_box">
+    <div class="category-tab">
+      <h1>Condition</h1>
+    </div>
+  </div>
+
+  <% @conditions.each do |condition| %>
+    <div class="card-trip">
+      <%= cl_image_tag condition.photo.key, height: 300, width: 400, crop: :fill %>
+      <div class="card-trip-infos">
+        <div>
+          <%= link_to condition.name.capitalize, treatments_path(age_group: params[:age_group], location: params[:location], type: params[:type], condition: condition.name) %>
+          <p>Short description here!</p>
+        </div>
+      </div>
+    </div>
+  <% end %>
+</div>

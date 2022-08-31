@@ -1,33 +1,26 @@
 class TreatmentsController < ApplicationController
   def index
-    #get all injury locations
-    @locations = InjuryLocation.all
-    #get all injury types
-    @types = InjuryType.all
-    #get all conditions
-    @conditions = Condition.all
-    #get all treatments
-    @treatments = Treatment.all
-    #filter treatments by age_group
-    @phase1 = @treatments.where(age_group: params[:age], injury_location_id: params[:location], injury_type_id: params[:type], condition_id: params[:condition] )
-    #filter treatments by injury_location
-    @phase2 = @phase1.where(injury_location_id: params[:location])
-    #filter treatments by Medical condition or Trauma
-    @phase3 = @phase2.where(injury_type_id: params[:type])
-    #filter treatments by condition
-    @phase4 = @phase3.where(condition_id: params[:condition])
-    if !params[:age_group].nil? && !params[:location].nil?
-    render "index_type"
+    if !params[:age_group].nil? && !params[:location].nil? && !params[:type].nil? && !params[:condition].nil?
+
+      @location = InjuryLocation.where(name: params[:location]).first
+      @type = InjuryType.where(name: params[:type]).first
+      @condition = Condition.where(name: params[:condition]).first
+      @treatment = Treatment.where(age_group: params[:age_group], injury_location: @location, injury_type: @type, condition: @condition).first
+      redirect_to treatment_path(@treatment)
+    elsif !params[:age_group].nil? && !params[:location].nil? && !params[:type].nil?
+      @conditions = Condition.all
+      render "index_condition"
+    elsif !params[:age_group].nil? && !params[:location].nil?
+      render "index_type"
     elsif !params[:age_group].nil?
       render "index_location"
     else
       render "index_age"
     end
-
   end
 
   def show
-
+    @treatment = Treatment.find(params[:id])
   end
 
   def new
