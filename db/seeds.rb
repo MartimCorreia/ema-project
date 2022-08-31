@@ -8,6 +8,7 @@
 require "open-uri"
 
 puts 'Cleaning database...'
+Patient.destroy_all
 Treatment.destroy_all
 Condition.destroy_all
 InjuryType.destroy_all
