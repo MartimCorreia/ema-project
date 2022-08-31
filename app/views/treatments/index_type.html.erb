@@ -1,1 +1,17 @@
-<h1>type</h1>
+<div class="container d-flex flex-column">
+  <div class="tab_box">
+    <div class="category-tab">
+      <h1>Injury Location</h1>
+    </div>
+  </div>
+
+  <div class="medical-condition">
+    <%= image_tag "img_place_holder.jpg" %>
+    <%= link_to "Medical" %>
+  </div>
+
+  <div class="trauma">
+    <img src="/app/assets/images/img_place_holder.jpg" alt="">
+    <%= link_to "Trauma", treatments_path(age_group: params[:age_group], location: params[:location], type: "trauma") %>
+  </div>
+</div>
