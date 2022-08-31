@@ -1,3 +1,32 @@
-.dashbody{
-  
+.avatar-place-holder{
+  border-radius: 50%;
+  width: 300px;
+  height: 300px;
+}
+
+.profile-box {
+  text-align: center;
+  background-color: #F8FAFA;
+  border-radius: 0 0 10px 10px;
+  height: 300px;
+}
+
+.info-box {
+  margin-top: 15px;
+}
+
+.position-dash-content {
+  background-color: rgb(255, 255, 255);
+  border-radius: 20px 20px 20px 20px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+  height: 370px;
+  margin: 1px 10px 20px 10px;
+}
+
+.dr-h1 {
+  font-weight: 700;
+}
+
+.id-h6 {
+  margin-bottom:0;
 }
