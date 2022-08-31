@@ -4,7 +4,7 @@
   z-index: -1;
 }
 
-.long-line1{
+.leftarm1{
   text-decoration: none;
   background-color: black;
   width: 30px;
@@ -15,7 +15,7 @@
   //opacity: 0;
 }
 
-.long-line2{
+.leftarm2{
   text-decoration: none;
   background-color: black;
   width: 30px;
@@ -26,7 +26,7 @@
   //opacity: 0;
 }
 
-.long-line3{
+.rightarm1{
   text-decoration: none;
   background-color: black;
   width: 30px;
@@ -38,7 +38,7 @@
 }
 
 
-.long-line4{
+.rightarm2{
   text-decoration: none;
   background-color: black;
   width: 30px;
@@ -49,7 +49,7 @@
   //opacity: 0;
 }
 
-.square{
+.torax{
   text-decoration: none;
   background-color: black;
   width: 70px;
@@ -60,7 +60,7 @@
   //opacity: 0;
 }
 
-.square2{
+.face{
   text-decoration: none;
   background-color: black;
   width: 70px;
@@ -69,5 +69,59 @@
   top: 5px;
   left: -245px;
   border-radius: 50%;
+  //opacity: 0;
+}
+
+.abd{
+  text-decoration: none;
+  background-color: black;
+  width: 70px;
+  height: 60px;
+  position: relative;
+  top: 140px;
+  left: -200px;
+  //opacity: 0;
+}
+.leftleg1{
+  text-decoration: none;
+  background-color: black;
+  width: 30px;
+  height: 180px;
+  position: relative;
+  top: 200px;
+  left: -50px;
+  //opacity: 0;
+}
+
+.leftleg2{
+  text-decoration: none;
+  background-color: black;
+  width: 30px;
+  height:110px;
+  position: relative;
+  top: 200px;
+  left: -80px;
+  //opacity: 0;
+}
+
+.rightleg1{
+  text-decoration: none;
+  background-color: black;
+  width: 30px;
+  height:120px;
+  position: relative;
+  top: 200px;
+  left: -200px;
+  //opacity: 0;
+}
+
+.rightleg2{
+  text-decoration: none;
+  background-color: black;
+  width: 30px;
+  height: 180px;
+  position: relative;
+  top: 200px;
+  left: -230px;
   //opacity: 0;
 }
