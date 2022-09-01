@@ -24,9 +24,9 @@
     </div>
     <div class="my-procedures col-sm-1 col-md-12 d-flex justify-content-center procedures-box">
       <ul>
-        <% @user.treatments.each do |treatment| %>
+        <% @procedures.each do |procedure| %>
           <li>
-            <%= link_to "##{treatment.id}. ----- #{treatment.created_at}", treatment_path(treatment) %>
+            <%= link_to "##{procedure.id}.----- #{procedure.created_at}", treatment_path(procedure) %>
           </li>
         <% end %>
       </ul>

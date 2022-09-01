@@ -1,13 +1,14 @@
 class TreatmentsController < ApplicationController
+
   def index
     if !params[:age_group].nil? && !params[:location].nil? && !params[:type].nil? && !params[:condition].nil?
-
       @location = InjuryLocation.where(name: params[:location]).first
       @type = InjuryType.where(name: params[:type]).first
       @condition = Condition.where(name: params[:condition]).first
       @treatment = Treatment.where(age_group: params[:age_group], injury_location: @location, injury_type: @type, condition: @condition).first
-      current_user.treatments << @treatment
-      redirect_to treatment_path(@treatment)
+      @procedure = Procedure.new(treatment_id: @treatment.id, user_id: current_user.id)
+      @procedure.save
+      redirect_to treatment_path(@procedure, completed: "true")
     elsif !params[:age_group].nil? && !params[:location].nil? && !params[:type].nil?
       @conditions = Condition.all
       render "index_condition"
@@ -20,8 +21,15 @@ class TreatmentsController < ApplicationController
     end
   end
 
+
+
   def show
-    @treatment = Treatment.find(params[:id])
+    # if completed true then
+    # create a record on the history tabel
+    # else
+    # just display
+    # end
+    @procedure = Procedure.find(params[:id])
   end
 
   def new
