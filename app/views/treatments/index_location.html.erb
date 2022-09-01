@@ -7,11 +7,16 @@
 
   <div class="adult-body d-flex justify-content-center mt-4">
     <%= image_tag "adult.png" %>
-    <%= link_to "", treatments_path(age_group: params[:age_group], location: "arm"), {class: "long-line1"} %> <%# left arm %>
-    <%= link_to "", treatments_path(age_group: params[:age_group], location: "arm"), {class: "long-line2"} %> <%# left arm %>
-    <%= link_to "", treatments_path(age_group: params[:age_group], location: "arm"), {class: "long-line3"} %> <%# right arm %>
-    <%= link_to "", treatments_path(age_group: params[:age_group], location: "arm"), {class: "long-line4"} %> <%# right arm %>
-    <%= link_to "", treatments_path(age_group: params[:age_group], location: "torax"), {class: "square"} %> <%# torax %>
-    <%= link_to "", treatments_path(age_group: params[:age_group], location: "head"), {class: "square2"} %> <%# head %>
+    <%= link_to "", treatments_path(age_group: params[:age_group], location: "arm"), {class: "leftarm1"} %> <%# left arm %>
+    <%= link_to "", treatments_path(age_group: params[:age_group], location: "arm"), {class: "leftarm2"} %> <%# left arm %>
+    <%= link_to "", treatments_path(age_group: params[:age_group], location: "arm"), {class: "rightarm1"} %> <%# right arm %>
+    <%= link_to "", treatments_path(age_group: params[:age_group], location: "arm"), {class: "rightarm2"} %> <%# right arm %>
+    <%= link_to "", treatments_path(age_group: params[:age_group], location: "torax"), {class: "torax"} %> <%# torax %>
+    <%= link_to "", treatments_path(age_group: params[:age_group], location: "head"), {class: "face"} %> <%# head %>
+    <%= link_to "", treatments_path(age_group: params[:age_group], location: "abdominal"), {class: "abd"} %> <%# abd %>
+    <%= link_to "", treatments_path(age_group: params[:age_group], location: "arm"), {class: "leftleg1"} %> <%# left leg %>
+    <%= link_to "", treatments_path(age_group: params[:age_group], location: "arm"), {class: "leftleg2"} %> <%# left leg %>
+    <%= link_to "", treatments_path(age_group: params[:age_group], location: "arm"), {class: "rightleg1"} %> <%# right leg %>
+    <%= link_to "", treatments_path(age_group: params[:age_group], location: "arm"), {class: "rightleg2"} %> <%# right leg %>
   </div>
 </div>
