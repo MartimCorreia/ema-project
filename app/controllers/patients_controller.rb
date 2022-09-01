@@ -2,8 +2,9 @@ class PatientsController < ApplicationController
 
   def new
 
-    @treatment = Procedure.find(params[:treatment_id]).treatment
+    @treatment = Treatment.find(params[:treatment_id])
     @patient = Patient.new
+
   end
 
   def create
@@ -16,11 +17,11 @@ class PatientsController < ApplicationController
   end
 
   def show
-
+    @patient = Patient.find(params[:id])
   end
 
   def report
-    @patient = Patient.find(params[:id])
+
 
   end
 
