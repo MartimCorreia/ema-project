@@ -1,3 +1,4 @@
-<h1> <%= @treatment.content %> </h1>
+<h1> <%= @procedure.treatment.content %> </h1>
 
-<%= cl_image_tag @treatment.photo.key, height: 300, width: 400, crop: :fill %>
+<%= cl_image_tag @procedure.treatment.photo.key, height: 300, width: 400, crop: :fill %>
+<%= link_to "Associate a Patient", new_treatment_patient_path(@procedure) %>

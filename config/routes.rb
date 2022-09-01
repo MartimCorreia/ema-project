@@ -2,7 +2,9 @@ Rails.application.routes.draw do
   devise_for :users
   root to: "pages#dashboard"
 
-  resources :treatments, only: [:index, :show, :new, :create]
+  resources :treatments, only: [:index, :show, :new, :create] do
+    resources :patients, only: [:new, :create]
+  end
 
-  resources :patients, only: [:new, :create, :show, :report]
+  resources :patients, only: [:show, :report]
 end

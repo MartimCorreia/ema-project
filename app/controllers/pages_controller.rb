@@ -3,6 +3,6 @@ class PagesController < ApplicationController
   def dashboard
     # get current user
     @user = current_user
-    @treatments = Treatment.all
+    @procedures = @user.procedures
   end
 end
