@@ -2,7 +2,7 @@
   background: #fcfcff;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-around;
   height: 50px;
   padding: 0px 50px;
   position: fixed;
@@ -22,5 +22,5 @@
 }
 .footer-links a:hover {
   opacity: 1;
-  color: black;
+  color: #77B5EF;
 }
