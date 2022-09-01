@@ -1,22 +1,15 @@
-<div class="container d-flex flex-column dashbody">
- <div class="tab_box">
-    <div class="category-tab">
-      <h1>Injury Location</h1>
-    </div>
+<div class="container">
+  <div class="row">
+    <div class="col-md-4 offset-md-4 col-xs-12">
+      <div class="tab_box">
+        <div class="category-tab">
+          <h1>Injury Location</h1>
+        </div>
+      </div>
+      <%= render "shared/body" %>
   </div>
+</div>
 
-  <div class="adult-body d-flex justify-content-center mt-4">
-    <%= image_tag "adult.png" %>
-    <%= link_to "", treatments_path(age_group: params[:age_group], location: "arm"), {class: "leftarm1"} %> <%# left arm %>
-    <%= link_to "", treatments_path(age_group: params[:age_group], location: "arm"), {class: "leftarm2"} %> <%# left arm %>
-    <%= link_to "", treatments_path(age_group: params[:age_group], location: "arm"), {class: "rightarm1"} %> <%# right arm %>
-    <%= link_to "", treatments_path(age_group: params[:age_group], location: "arm"), {class: "rightarm2"} %> <%# right arm %>
-    <%= link_to "", treatments_path(age_group: params[:age_group], location: "torax"), {class: "torax"} %> <%# torax %>
-    <%= link_to "", treatments_path(age_group: params[:age_group], location: "head"), {class: "face"} %> <%# head %>
-    <%= link_to "", treatments_path(age_group: params[:age_group], location: "abdominal"), {class: "abd"} %> <%# abd %>
-    <%= link_to "", treatments_path(age_group: params[:age_group], location: "arm"), {class: "leftleg1"} %> <%# left leg %>
-    <%= link_to "", treatments_path(age_group: params[:age_group], location: "arm"), {class: "leftleg2"} %> <%# left leg %>
-    <%= link_to "", treatments_path(age_group: params[:age_group], location: "arm"), {class: "rightleg1"} %> <%# right leg %>
-    <%= link_to "", treatments_path(age_group: params[:age_group], location: "arm"), {class: "rightleg2"} %> <%# right leg %>
-  </div>
+
+
 </div>
