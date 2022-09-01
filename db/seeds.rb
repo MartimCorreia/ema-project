@@ -96,23 +96,20 @@ c10.save
 puts "Done."
 
 puts "creating treatments..."
-file = URI.open("https://res.cloudinary.com/dluisdviu/image/upload/v1661981398/EMA/Protocolos/dispneia_flibk9.pdf")
 t1 = Treatment.new(age_group: "child", content: "Protocolo", injury_location_id: il1.id, injury_type_id: it1.id, condition_id: c1.id)
-t1.photo.attach(io: file, filename: "Dyspneia.png", content_type:"image/png")
+t1.images.attach(io: URI.open("https://res.cloudinary.com/dluisdviu/image/upload/v1661981398/EMA/Protocolos/dispneia_flibk9.pdf"), filename: 'file.pdf')
 t1.save
+puts "1"
 
-file = URI.open("https://res.cloudinary.com/dluisdviu/image/upload/v1661981398/EMA/Protocolos/dor_toracica_oiv7ds.pdf")
 t2 = Treatment.new(age_group: "adult", content: "Protocolo", injury_location_id: il1.id, injury_type_id: it1.id, condition_id: c2.id)
-t2.photo.attach(io: file, filename: "Chest_pain", content_type:"image/png")
+t2.images.attach(io: URI.open("https://res.cloudinary.com/dluisdviu/image/upload/v1661981398/EMA/Protocolos/dor_toracica_oiv7ds.pdf"), filename: 'file.pdf')
 t2.save
 
-file = URI.open("https://res.cloudinary.com/dluisdviu/image/upload/v1661981398/EMA/Protocolos/trauma_e4rbgz.pdf")
 t3 = Treatment.new(age_group: "adult", content: "Protocolo", injury_location_id: il2.id, injury_type_id: it2.id, condition_id: c3.id)
-t3.photo.attach(io: file, filename: "Fracture", content_type:"image/png")
+t3.images.attach(io: URI.open("https://res.cloudinary.com/dluisdviu/image/upload/v1661981398/EMA/Protocolos/trauma_e4rbgz.pdf"), filename: 'file.pdf')
 t3.save
 
-file = URI.open("https://res.cloudinary.com/dluisdviu/image/upload/v1661981398/EMA/Protocolos/queimaduras_up3pfr.pdf")
 t4 = Treatment.new(age_group: "child", content: "Protocolo", injury_location_id: il3.id, injury_type_id: it2.id, condition_id: c4.id)
-t4.photo.attach(io: file, filename: "Burn", content_type:"image/png")
+t4.images.attach(io: URI.open("https://res.cloudinary.com/dluisdviu/image/upload/v1661981398/EMA/Protocolos/queimaduras_up3pfr.pdf"), filename: 'file.pdf')
 t4.save
 puts "Done."
