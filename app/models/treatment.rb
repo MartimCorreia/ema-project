@@ -4,4 +4,5 @@ class Treatment < ApplicationRecord
   belongs_to :condition
   has_many :patients
   has_one_attached :images
+  has_many :procedures
 end

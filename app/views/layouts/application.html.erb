@@ -22,7 +22,14 @@
           <%= render "shared/flashes" %>
         </div>
       </div>
-        <%= render "shared/footer" %>
+    </div>
+    <div class="container">
+          <% unless controller_name == 'sessions' && action_name == 'new'%>
+          <%= render "shared/footer" %>
+          <% end %>
+          <%= render "shared/flashes" %>
+        </div>
+      </div>
     </div>
   </body>
 </html>
