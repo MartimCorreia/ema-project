@@ -1,0 +1,38 @@
+.medical-trauma-box {
+  height: 85vh;
+}
+
+.medical-img, .trauma {
+  width: 100%;
+  border-radius: 10px 10px 0 0;
+  height: 172px;
+  filter: brightness(0.5);
+  opacity: 0.9;
+}
+
+.trauma a {
+  text-decoration: none;
+}
+
+.medical-h2 a, .trauma-h2 a {
+  text-decoration: none;
+  color: linear-gradient(180deg, #77B5EF 0%, #1B549C 100%);
+  font-weight: 600;
+}
+
+.medical-h2, .trauma-h2 {
+  // border-radius: 0 0 10px 10px;
+  margin-bottom: 0;
+  padding: 10px;
+}
+
+.medical-condition, .trauma-condition {
+  box-shadow: rgba(17, 17, 26, 0.1) 0px 0px 16px;
+  border-radius: 10px;
+}
+
+.img-outer-box {
+  background-color: white;
+  border-radius: 10px;
+  padding: 12px;
+}
