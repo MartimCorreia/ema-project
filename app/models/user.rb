@@ -6,4 +6,5 @@ class User < ApplicationRecord
          has_many :patients
          has_many :procedures
          has_many :treatments, through: :patients
+         has_one_attached :photo
 end
