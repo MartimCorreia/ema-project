@@ -1,8 +1,21 @@
-<%= simple_form_for [@treatment, @patient] do |f| %>
-  <%= f.input :first_name %>
-  <%= f.input :last_name %>
-  <%= f.input :age %>
-  <%= f.input :weight %>
-  <%= f.input :description %>
-  <%= f.submit %>
-<% end %>
+<div class="container">
+  <div class="row">
+    <div class="col-md-4 offset-md-4 col-xs-12 container-outter">
+      <div class="form-box d-flex flex-column align-items-center justify-content-evenly">
+        <div class="indication-box">
+          <h1>Paitent Info</h1>
+        </div>
+        <%= simple_form_for [@treatment, @patient] do |f| %>
+          <%= f.input :first_name %>
+          <%= f.input :last_name %>
+          <%= f.input :age %>
+          <%= f.input :weight %>
+          <%= f.input :description %>
+          <div class="btn-container mt-4 d-flex justify-content-center">
+            <%= f.submit :class => 's-btn' %>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
