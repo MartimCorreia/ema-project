@@ -8,7 +8,7 @@ class TreatmentsController < ApplicationController
       @treatment = Treatment.where(age_group: params[:age_group], injury_location: @location, injury_type: @type, condition: @condition).first
       @procedure = Procedure.new(treatment_id: @treatment.id, user_id: current_user.id)
       @procedure.save
-      redirect_to treatment_path(@procedure, completed: "true")
+      redirect_to treatment_path(@procedure.treatment.id, completed: "true")
     elsif !params[:age_group].nil? && !params[:location].nil? && !params[:type].nil?
       @conditions = Condition.all
       render "index_condition"
@@ -29,7 +29,8 @@ class TreatmentsController < ApplicationController
     # else
     # just display
     # end
-    @procedure = Procedure.find(params[:id])
+    @treatment = Treatment.find(params[:id])
+    @patient = Patient.new
   end
 
   def new
