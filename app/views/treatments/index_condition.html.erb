@@ -1,5 +1,5 @@
 <div class="container image-box d-flex flex-column justify-content-center">
-  <div class="card-category indjury-condition text-center mb-3">
+  <div class="card-category indjury-condition text-center">
     <% @conditions.each do |condition| %>
       <div class="card-trip mt-3">
         <%= cl_image_tag condition.photo.key, height: 300, width: 400, crop: :fill, class:"condition-images mt-3" %>
