@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap');
+
 .log-in-button {
   background-color: #1DA1F2;
   border-radius: 15px;
@@ -30,6 +32,7 @@
   width: fit-content;
   padding: 10px;
   bottom: 50px;
+  font-family: lato;
 }
 
 .procedures-icon {
@@ -39,6 +42,7 @@
   padding: 10px;
   bottom: 50px;
   width: 100%;
+  font-family: lato;
 }
 
 .adult-age, .child-age {
