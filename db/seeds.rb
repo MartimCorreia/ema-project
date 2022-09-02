@@ -9,10 +9,29 @@ require "open-uri"
 
 puts 'Cleaning database...'
 Patient.destroy_all
+User.destroy_all
+Procedure.destroy_all
 Treatment.destroy_all
 Condition.destroy_all
 InjuryType.destroy_all
 InjuryLocation.destroy_all
+
+puts "creating users..."
+file = URI.open("https://res.cloudinary.com/dluisdviu/image/upload/v1662117502/EMA/users/luis_clbu66_iovqga.jpg")
+user1 = User.new(first_name:"Luis", last_name:"Campos", email:"luis@mail.com", password: "123123" )
+user1.photo.attach(io: file, filename: "Luis", content_type:"image/png")
+user1.save
+
+file = URI.open("https://res.cloudinary.com/dluisdviu/image/upload/v1662119256/EMA/users/martim_ca53jw.jpg")
+user2 = User.new(first_name:"Martim", last_name:"Correia", email:"martim@mail.com", password: "123123" )
+user2.photo.attach(io: file, filename: "Luis", content_type:"image/png")
+user2.save
+
+file = URI.open("https://res.cloudinary.com/dluisdviu/image/upload/v1662119256/EMA/users/bryan_rosymc.jpg")
+user3 = User.new(first_name:"Bryan", last_name:"Wong", email:"bryan@mail.com", password: "123123" )
+user3.photo.attach(io: file, filename: "Luis", content_type:"image/png")
+user3.save
+
 
 puts "creating injury locations..."
 il1 = InjuryLocation.new(name:"head")
@@ -99,7 +118,6 @@ puts "creating treatments..."
 t1 = Treatment.new(age_group: "child", content: "Protocolo", injury_location_id: il1.id, injury_type_id: it1.id, condition_id: c1.id)
 t1.images.attach(io: URI.open("https://res.cloudinary.com/dluisdviu/image/upload/v1661981398/EMA/Protocolos/dispneia_flibk9.pdf"), filename: 'file.pdf')
 t1.save
-puts "1"
 
 t2 = Treatment.new(age_group: "adult", content: "Protocolo", injury_location_id: il1.id, injury_type_id: it1.id, condition_id: c2.id)
 t2.images.attach(io: URI.open("https://res.cloudinary.com/dluisdviu/image/upload/v1661981398/EMA/Protocolos/dor_toracica_oiv7ds.pdf"), filename: 'file.pdf')

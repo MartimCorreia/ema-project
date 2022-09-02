@@ -12,7 +12,7 @@
   <h3> <%=@patient.first_name.capitalize%>  <%=@patient.last_name.capitalize%>, age <%=@patient.age%>,
     suffered a  <strong><%= @patient.treatment.condition.name %></strong>,
     on his/her <strong><%= @patient.treatment.injury_location.name %></strong> wich we had to apply this
-    <strong><%= @patient.treatment.content %></strong>.
+    <strong><a href=<%=cl_image_path (@patient.treatment.images.key)%>>Protocol</a></strong>.
   </h3>
   <h2> Doctor <%= @patient.user.first_name %>'s note:</h2>
   <h3> <%= @patient.description %> </h3>

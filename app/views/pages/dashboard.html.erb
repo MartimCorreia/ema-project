@@ -1,7 +1,7 @@
 <div class="container d-flex flex-column dashbody p-0">
   <div class="tab_box">
     <div class="profile-box mt-2">
-      <%= image_tag "place-holder.jpg", class:"avatar-place-holder" %>
+      <%= cl_image_tag current_user.photo.key, class:"avatar-place-holder" %>
     </div>
   </div>
   <div class="position-dash-content d-flex flex-column mt-3">
