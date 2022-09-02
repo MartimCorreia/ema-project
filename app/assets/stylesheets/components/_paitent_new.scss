@@ -1,0 +1,26 @@
+.form-box {
+  height: fit-content;
+  font-family: lato;
+  height: 80vh;
+  background-color: white;
+  width: fit-content;
+  border-radius: 15px;
+  margin: 0;
+}
+
+.indication-box > h1 {
+  font-weight: 700;
+}
+
+.new_patient {
+  height: fit-content;
+  padding: 15px;
+}
+
+.container-outter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 87vh;
+  border-radius: 15px;
+}
