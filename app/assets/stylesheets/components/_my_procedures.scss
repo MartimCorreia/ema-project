@@ -1,9 +1,7 @@
 .my-procedures button{
   padding-left: 10px;
 }
-.my-procedures ul{
-  list-style-type: none;
-}
+
 .procedure-link{
   text-align: center;
   margin-bottom: 20px;
@@ -17,4 +15,6 @@
   height: 40px;
   -webkit-box-shadow: 2px 2px 9px 0px rgba(0,0,0,0.31);
   box-shadow: 2px 2px 9px 0px rgba(0,0,0,0.31);
+  width: fit-content;
+  padding: 5px;
 }
