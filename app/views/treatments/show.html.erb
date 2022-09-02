@@ -1,5 +1,6 @@
 <h1> <%= @treatment.content %> </h1>
 
-<a href=<%= cl_image_path (@treatment.images.key) %>>Protocolo-PDF</a>
-<%= link_to "Associate a Patient", new_treatment_patient_path(@treatment, @patient) %>
-
+<a href=<%=cl_image_path (@treatment.images.key)%> target="_blank">Protocol to follow</a>
+<% if params[:completed] != "true" %>
+  <%= link_to "Associate a Patient", new_treatment_patient_path(@treatment, @patient) %>
+<% end %>
