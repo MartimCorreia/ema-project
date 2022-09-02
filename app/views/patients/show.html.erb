@@ -1,5 +1,20 @@
-<h1>report</h1>
+<h1>Medical Report</h1>
 
 <div class="report">
-  
+  <h2>Patient information:</h2>
+  <ul>
+   <li> <%=@patient.age%> ( <%=@patient.treatment.age_group %> ) </li>
+    <li> <%= @patient.treatment.injury_location.name %> </li>
+    <li> <%= @patient.treatment.injury_type.name %> </li>
+    <li> <%= @patient.treatment.condition.name %> </li>
+    <li> <%= @patient.user.first_name %> </li>
+  </ul>
+  <h3> <%=@patient.first_name.capitalize%>  <%=@patient.last_name.capitalize%>, age <%=@patient.age%>,
+    suffered a  <strong><%= @patient.treatment.condition.name %></strong>,
+    on his/her <strong><%= @patient.treatment.injury_location.name %></strong> wich we had to apply this
+    <strong><%= @patient.treatment.content %></strong>.
+  </h3>
+  <h2> Doctor <%= @patient.user.first_name %>'s note:</h2>
+  <h3> <%= @patient.description %> </h3>
+
 </div>

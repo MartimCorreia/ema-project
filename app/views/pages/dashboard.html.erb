@@ -26,7 +26,7 @@
       <ul>
         <% @procedures.each do |procedure| %>
           <li>
-            <%= link_to "##{procedure.id}.----- #{procedure.created_at}", treatment_path(procedure) %>
+            <%= link_to "##{procedure.id}.----- #{procedure.created_at}", treatment_path(procedure.treatment) %>
           </li>
         <% end %>
       </ul>

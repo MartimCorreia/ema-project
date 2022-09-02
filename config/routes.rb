@@ -6,5 +6,5 @@ Rails.application.routes.draw do
     resources :patients, only: [:new, :create]
   end
 
-  resources :patients, only: [:show, :report]
+  resources :patients, only: [:show ,:report]
 end
