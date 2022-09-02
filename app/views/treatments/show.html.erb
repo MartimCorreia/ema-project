@@ -1,4 +1,5 @@
 <h1> <%= @treatment.content %> </h1>
 
-<%= cl_image_tag @treatment.photo.key, height: 300, width: 400, crop: :fill %>
+<a href=<%= cl_image_path (@treatment.images.key) %>>Protocolo-PDF</a>
 <%= link_to "Associate a Patient", new_treatment_patient_path(@treatment, @patient) %>
+

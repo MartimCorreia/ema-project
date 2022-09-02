@@ -1,5 +1,9 @@
 body {
-  background: linear-gradient(180deg, #FFFFFF 0%, #EDF5FD 100%);
+  background: linear-gradient(239deg, #FFFFFF 0%, #EDF5FD 100%);
+}
+
+.dashbody {
+  height: 100vh;
 }
 
 .avatar-place-holder{
@@ -12,8 +16,6 @@ body {
 
 .profile-box {
   text-align: center;
-  background-color: #F8FAFA;
-  border-radius: 0 0 10px 10px;
   height: 300px;
 }
 
