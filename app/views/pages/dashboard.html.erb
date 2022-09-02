@@ -4,7 +4,7 @@
       <%= cl_image_tag current_user.photo.key, class:"avatar-place-holder" %>
     </div>
   </div>
-  <div class="position-dash-content d-flex flex-column mt-3">
+  <div class="position-dash-content d-flex flex-column mb-5">
     <div class="dashboard-content">
       <div class="d-flex justify-content-around info-box">
         <div class="row">
@@ -20,16 +20,12 @@
       <%= link_to "New treatment", treatments_path, class:"new-treatment-btn"%>
     </div>
     <div class="box d-flex justify-content-center">
-      <h3 class="text-center procedures-icon mt-4">My procedures</h3>
+      <h3 class="text-center procedures-icon mt-4 mb-3">My procedures</h3>
     </div>
-    <div class="my-procedures col-sm-1 col-md-12 d-flex justify-content-center procedures-box">
-      <ul>
-        <% @procedures.each do |procedure| %>
-          <li>
-            <%= link_to "##{procedure.id}.----- #{procedure.created_at}", treatment_path(procedure.treatment), class:"procedure-link" %>
-          </li>
-        <% end %>
-      </ul>
+    <div class="my-procedures col-sm-1 col-md-12 d-flex justify-content-center procedures-box flex-column align-items-center">
+      <% @procedures.each do |procedure| %>
+          <%= link_to "##{procedure.id}.----- #{procedure.created_at}", treatment_path(procedure.treatment), class:"procedure-link" %>
+      <% end %>
     </div>
   </div>
 </div>
