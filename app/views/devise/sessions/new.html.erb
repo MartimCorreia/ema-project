@@ -1,22 +1,17 @@
 <div class="bg-color">
-  <div class="top-container d-flex justify-content-center align-items-center">
-    <div class="outer-box d-flex justify-content-center align-items-center">
-      <h1 class="ema-h1 text-center">EMA</h1>
-    </div>
-  </div>
-    <h4 class="text-center  mb-5 ema-h4">emergency medical algorithms</h4>
-
   <div class="d-flex flex-column justify-content-around align-items-center">
-    <div class="simple-form ">
+    <div class="simple-form login-form">
       <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name), data: { turbo: :false }) do |f| %>
         <h2 class="text-center mt-2 login-h2">Log in</h2>
         <div class="form-inputs d-flex flex-column justify-content-center">
-          <%= f.input_field :email,
+          <%= f.label :Email, :class => "email-label" %>
+          <%= f.input_field :email, :class => "sf-input-box",
                       required: false,
                       autofocus: true,
                       input_html: { autocomplete: "email" } %>
+          <%= f.label :Password, :class => "pw-label mt-3" %>
           <%= f.input_field :password,
-                      required: false,
+                      required: false, :class => "sf-input-box",
                       input_html: { autocomplete: "current-password" } %>
           <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %>
           <div class="form-actions d-flex justify-content-center flex-column">
