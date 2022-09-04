@@ -4,6 +4,14 @@ body {
 }
 
 .bg-color {
-  background-image: linear-gradient(rgba(103, 173, 238, 0.889), rgba(2, 63, 142, 0.921));
+  background-image: url("login-page.png");
+  background-repeat: no-repeat;
+  height: 100vh;
+  position: relative;
+}
+
+.bg-color-intro {
+  background-image: url("about_page_pic.png");
+  background-repeat: no-repeat;
   height: 100vh;
 }

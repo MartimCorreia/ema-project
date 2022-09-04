@@ -6,5 +6,5 @@ class User < ApplicationRecord
          has_many :patients, dependent: :destroy
          has_many :procedures, dependent: :destroy
          has_many :treatments, through: :patients, dependent: :destroy
-         has_one_attached :photo
+         has_one_attached :photo, dependent: :destroy
 end

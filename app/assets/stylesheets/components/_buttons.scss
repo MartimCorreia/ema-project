@@ -1,27 +1,30 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap');
 
 .log-in-button {
-  background-color: #1DA1F2;
-  border-radius: 15px;
-  text-align: center;
-  width:100%;
+  background: #426BD7;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 30px;
   color: white;
   font-weight: 400;
 }
 
 .sign-up-btn {
-  text-decoration: none;
-  background-color: #1DA1F2;
-  border-radius: 15px;
   text-align: center;
   width:100%;
-  color: white;
-  font-weight: 400;
+  color: #567ADB;
   padding: 6px 0 6px 0;
+  background: #FFFFFF;
+  box-shadow: 0px 2px 7px rgba(0, 0, 0, 0.3);
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 400;
 }
 
 .forget-pw-btn  {
   text-decoration: none;
+  font-family: 'Lato';
+  margin-left: 5px;
+  font-size: 15px;
 }
 
 .new-treatment-btn {
