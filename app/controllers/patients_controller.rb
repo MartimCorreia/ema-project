@@ -1,5 +1,9 @@
 class PatientsController < ApplicationController
 
+  def index
+    @patients = Patient.all
+  end
+
   def new
 
     @treatment = Treatment.find(params[:treatment_id])
@@ -13,7 +17,7 @@ class PatientsController < ApplicationController
     @patient.treatment = @treatment
     @patient.user = current_user
     @patient.save
-    redirect_to patient_path(@patient)
+    redirect_to  new_treatment_patient_medical_report_path(@treatment, @patient)
   end
 
   def show

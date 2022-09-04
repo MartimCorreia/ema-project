@@ -1,0 +1,6 @@
+<h1>Procedures history:</h1>
+<div class="my-procedures col-sm-1 col-md-12 d-flex justify-content-center procedures-box flex-column align-items-center">
+  <% @procedures.each do |procedure| %>
+      <%= link_to "##{procedure.id}.----- #{procedure.created_at}", treatment_path(procedure.treatment), class:"procedure-link" %>
+  <% end %>
+</div>

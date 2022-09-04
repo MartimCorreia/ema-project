@@ -1,0 +1,6 @@
+<h1>My patients</h1>
+<div class="my-procedures col-sm-1 col-md-12 d-flex justify-content-center procedures-box flex-column align-items-center">
+  <% @patients.each do |patient| %>
+      <%= link_to "##{patient.first_name.capitalize} #{patient.last_name.capitalize}", patient_path(patient), class:"procedure-link" %>
+  <% end %>
+</div>

@@ -20,12 +20,13 @@
       <%= link_to "New treatment", treatments_path, class:"new-treatment-btn"%>
     </div>
     <div class="box d-flex justify-content-center">
-      <h3 class="text-center procedures-icon mt-4 mb-3">My procedures</h3>
+      <%= link_to "My Procedures", procedures_path %>
     </div>
-    <div class="my-procedures col-sm-1 col-md-12 d-flex justify-content-center procedures-box flex-column align-items-center">
-      <% @procedures.each do |procedure| %>
-          <%= link_to "##{procedure.id}.----- #{procedure.created_at}", treatment_path(procedure.treatment), class:"procedure-link" %>
-      <% end %>
+     <div class="box d-flex justify-content-center">
+      <%= link_to "My Patients", patients_path %>
+    </div>
+      <div class="box d-flex justify-content-center">
+      <%= link_to "My Reports", medical_reports_path %>
     </div>
   </div>
 </div>
