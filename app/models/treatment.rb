@@ -5,4 +5,5 @@ class Treatment < ApplicationRecord
   has_many :patients
   has_one_attached :images
   has_many :procedures
+  has_many :medical_reports, dependent: :destroy
 end

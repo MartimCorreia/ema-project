@@ -1,0 +1,19 @@
+<div class="container">
+  <div class="report card mt-5 p-3">
+    <h1 class ="text-center">Medical Report</h1>
+    <h3> <%=@medical_report.patient.first_name.capitalize%>  <%=@medical_report.patient.last_name.capitalize%>, age <%=@medical_report.patient.age%>,
+      suffered a  <strong><%= @medical_report.patient.treatment.condition.name %></strong>,
+      on his/her <strong><%= @medical_report.patient.treatment.injury_location.name %></strong> wich we had to apply this
+      <strong><a href=<%=cl_image_path (@medical_report.patient.treatment.images.key)%> target="_blank">Protocol</a></strong>.
+    </h3>
+    <div class="signature">
+      <p>Doctor's signature:</p>
+      <%= image_tag "drluis.png" %>.
+      <p class="text-center ms-3">(<%= @medical_report.patient.user.first_name %> <%= @medical_report.patient.user.last_name %>)</p>
+    </div>
+  </div>
+  <div class="report card mt-5 p-3">
+    <h2> Doctor <%= @medical_report.patient.user.first_name %>'s note:</h2>
+    <h3> <%= @medical_report.patient.medical_history %> </h3>
+  </div>
+</div>

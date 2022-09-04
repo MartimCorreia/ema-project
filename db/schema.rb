@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_09_02_105339) do
+ActiveRecord::Schema[7.0].define(version: 2022_09_03_105620) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -61,6 +61,17 @@ ActiveRecord::Schema[7.0].define(version: 2022_09_02_105339) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "medical_reports", force: :cascade do |t|
+    t.bigint "patient_id", null: false
+    t.string "hospital"
+    t.string "diagnosis"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.bigint "treatment_id", null: false
+    t.index ["patient_id"], name: "index_medical_reports_on_patient_id"
+    t.index ["treatment_id"], name: "index_medical_reports_on_treatment_id"
+  end
+
   create_table "patients", force: :cascade do |t|
     t.string "first_name"
     t.string "last_name"
@@ -70,7 +81,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_09_02_105339) do
     t.bigint "user_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "description"
+    t.string "medical_history"
     t.index ["treatment_id"], name: "index_patients_on_treatment_id"
     t.index ["user_id"], name: "index_patients_on_user_id"
   end
@@ -114,6 +125,8 @@ ActiveRecord::Schema[7.0].define(version: 2022_09_02_105339) do
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
   add_foreign_key "active_storage_variant_records", "active_storage_blobs", column: "blob_id"
+  add_foreign_key "medical_reports", "patients"
+  add_foreign_key "medical_reports", "treatments"
   add_foreign_key "patients", "treatments"
   add_foreign_key "patients", "users"
   add_foreign_key "procedures", "treatments"
