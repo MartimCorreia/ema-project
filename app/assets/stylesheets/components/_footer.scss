@@ -4,10 +4,10 @@
   align-items: center;
   justify-content: space-around;
   height: 50px;
-  padding: 0px 50px;
   position: fixed;
   bottom: 0;
   width: 100%;
+  z-index: 1;
 }
 .footer-links {
   display: flex;
@@ -23,4 +23,9 @@
 .footer-links a:hover {
   opacity: 1;
   color: #77B5EF;
+}
+
+.fa-solid {
+  margin-right: 30px;
+  margin-left: 30px;
 }

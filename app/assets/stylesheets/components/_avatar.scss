@@ -1,6 +1,7 @@
 .avatar {
   width: 30px;
-  border-radius: 50%;
+  opacity: 0.9;
+  filter: invert(1);
 }
 .avatar-large {
   width: 20px;
