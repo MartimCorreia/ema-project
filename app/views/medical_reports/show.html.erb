@@ -1,7 +1,8 @@
 <div class="container">
   <div class="report card mt-5 p-3">
     <h1 class ="text-center">Medical Report</h1>
-    <h3> <%=@medical_report.patient.first_name.capitalize%>  <%=@medical_report.patient.last_name.capitalize%>, age <%=@medical_report.patient.age%>,
+    <h3> <%= @medical_report.created_at%> <br><%=@medical_report.patient.first_name.capitalize%>  <%=@medical_report.patient.last_name.capitalize%>, age <%=@medical_report.patient.age%>,
+      was sent to <strong><%=@medical_report.hospital%></strong>,
       suffered a  <strong><%= @medical_report.patient.treatment.condition.name %></strong>,
       on his/her <strong><%= @medical_report.patient.treatment.injury_location.name %></strong> wich we had to apply this
       <strong><a href=<%=cl_image_path (@medical_report.patient.treatment.images.key)%> target="_blank">Protocol</a></strong>.

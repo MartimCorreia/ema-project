@@ -1,0 +1,7 @@
+<h1>My Reports</h1>
+
+<div class="my-procedures col-sm-1 col-md-12 d-flex justify-content-center procedures-box flex-column align-items-center">
+  <% @medical_reports.each do |medical_report| %>
+      <%= link_to "##{medical_report.patient.first_name.capitalize} #{medical_report.patient.last_name.capitalize}'s report", medical_report_path(medical_report), class:"procedure-link" %>
+  <% end %>
+</div>
