@@ -8,6 +8,7 @@ Rails.application.routes.draw do
       resources :medical_reports, only:[:new, :create]
     end
   end
-  resources :medical_reports, only: [:show]
-  resources :patients, only: [:show]
+  resources :procedures, only: [:index]
+  resources :medical_reports, only: [:show, :index]
+  resources :patients, only: [:show, :index]
 end

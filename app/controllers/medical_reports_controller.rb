@@ -1,4 +1,9 @@
 class MedicalReportsController < ApplicationController
+
+  def index
+    @medical_reports = MedicalReport.all
+  end
+
   def new
     @treatment = Treatment.find(params[:treatment_id])
     @patient = Patient.find(params[:patient_id])
@@ -8,10 +13,12 @@ class MedicalReportsController < ApplicationController
   def create
     @treatment = Treatment.find(params[:treatment_id])
     @patient = Patient.find(params[:patient_id])
+    @procedure = Procedure.find_by(user_id: current_user, treatment_id: @treatment)
     @medical_report = MedicalReport.new(medical_report_params)
     @medical_report.treatment = @treatment
     @medical_report.patient = @patient
     @medical_report.save
+    @procedure.destroy
     redirect_to medical_report_path(@medical_report)
   end
 
