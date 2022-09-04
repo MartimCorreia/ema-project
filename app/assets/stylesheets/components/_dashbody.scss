@@ -1,9 +1,33 @@
-body {
-  background: linear-gradient(239deg, #FFFFFF 0%, #EDF5FD 100%);
+.dash-top{
+  height: 446px;
+  width: 390px;
+  left: 0px;
+  top: 0px;
+  position: absolute;
+  bottom: 47.16%;
+  background: linear-gradient(180deg, #7e93dc 0%, rgba(0, 34, 154, 0) 100%);
 }
 
-.dashbody {
-  height: 100vh;
+.dash-bottom {
+  background: #eceffa;
+  border-radius: 40px 40px 0px 0px;
+  height: 520px;
+  width: 390px;
+  left: 0px;
+  top: 324px;
+  position: absolute;
+  z-index: 1;
+}
+
+.auto-rotate-img {
+  // position: absolute;
+  height: 127px;
+  width: 308px;
+  left: 0px;
+  top: 0px;
+  background: url(covid-banner.png);
+  box-shadow: 1px 2px 4px 2px rgba(0, 0, 0, 0.25);
+  border-radius: 15px;
 }
 
 .avatar-place-holder{
@@ -17,6 +41,7 @@ body {
 .profile-box {
   text-align: center;
   height: 300px;
+  margin-top: 45px;
 }
 
 .info-box {
@@ -31,12 +56,64 @@ body {
   margin: 1px 10px 20px 10px;
 }
 
-.user-info > h1 {
-  font-weight: 700;
-  font-family: lato;
+.user-info-box {
+  position: absolute;
+  width: 316px;
+  height: 70px;
+  left: 37px;
+  top: 285px;
+  background: #79B2E9;
+  border-radius: 30px;
+
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  z-index: 2;
 }
 
-.user-info > h6 {
-  margin-bottom:0;
-  font-family: lato;
+.user-info-box > h1 {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 26px;
+
+  color: #FFFFFF;
+}
+
+.user-info-box > h6 {
+  position: absolute;
+left: 33.86%;
+right: 36.39%;
+top: 61.43%;
+bottom: 18.57%;
+
+font-family: 'Lato';
+font-style: normal;
+font-weight: 700;
+font-size: 12px;
+line-height: 14px;
+
+color: #FFFFFF;
+}
+
+.img-button-container > h5 {
+  margin-right: 187px;
+  color: #000000;
+  position: absolute;
+  bottom: 298px;
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 19px;
+
+  color: #000000;
+  z-index: 2;
+}
+
+.btn-box {
+  margin-top: 29px;
+}
+
+.top-button-box {
+  margin-right: 43px;
 }

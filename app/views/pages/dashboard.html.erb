@@ -1,32 +1,49 @@
-<div class="container d-flex flex-column dashbody p-0">
-  <div class="tab_box">
-    <div class="profile-box mt-2">
+<div class="whole-dahs-container">
+  <div class="dash-top">
+    <div class="profile-box">
+      <%# <%= image_tag "bw-img.png" %>
       <%= cl_image_tag current_user.photo.key, class:"avatar-place-holder" %>
     </div>
   </div>
-  <div class="position-dash-content d-flex flex-column mb-5">
-    <div class="dashboard-content">
-      <div class="d-flex justify-content-around info-box">
-        <div class="row">
-          <div class="user-info col-sm-1 col-md-12">
-            <h1 class="text-center">Dr.<%=@user.first_name %> <%=@user.last_name %></h1>
-            <h6 class="text-center">Id: <%= @user.id %></h6>
+
+  <div class="user-info-box d-flex flex-column align-items-center justify-content-evenly col-sm-1 col-md-12">
+    <h1 class="text-center mb-4">Dr. &nbsp<%=@user.first_name %> <%=@user.last_name %></h1>
+    <h6 class="text-center">(Doctor ID: #<%= @user.id %>)</h6>
+  </div>
+
+  <div class="dash-bottom">
+    <div class="img-button-container d-flex flex-column align-items-center">
+      <div class="auto-rotate-img mt-5 mb-4">
+
+      </div>
+
+      <h5>Select your task</h5>
+
+      <div class="btn-box d-flex align-items-center justify-content-center">
+
+        <div class="top-button-box">
+          <div class="start-treatment text-center treatment-box d-flex flex-column justify-content-center align-items-center">
+            <%= image_tag "new-treatment.png", class:"sticker" %>
+            <%= link_to "New treatment", treatments_path, class:"text-btn"%>
+          </div>
+
+          <div class="box text-center paitent-box d-flex flex-column justify-content-center align-items-center">
+            <%= image_tag "my-paitent.png", class:"sticker" %>
+            <%= link_to "My Patients", patients_path, class:"text-btn" %>
+          </div>
+        </div>
+
+        <div class="bot-button-box">
+          <div class="box text-center procedure-box d-flex flex-column justify-content-center align-items-center">
+            <%= image_tag "my-procedure.png", class:"procedure-sticker" %>
+            <%= link_to "My Procedures", procedures_path, class:"text-btn" %>
+          </div>
+          <div class="box text-center report-box d-flex flex-column justify-content-center align-items-center">
+            <%= image_tag "my-report.png", class:"report-sticker" %>
+            <%= link_to "My Reports", medical_reports_path, class:"text-btn" %>
           </div>
         </div>
       </div>
-    </div>
-    <hr>
-    <div class="start-treatment text-center">
-      <%= link_to "New treatment", treatments_path, class:"new-treatment-btn"%>
-    </div>
-    <div class="box d-flex justify-content-center">
-      <%= link_to "My Procedures", procedures_path %>
-    </div>
-     <div class="box d-flex justify-content-center">
-      <%= link_to "My Patients", patients_path %>
-    </div>
-      <div class="box d-flex justify-content-center">
-      <%= link_to "My Reports", medical_reports_path %>
     </div>
   </div>
 </div>
