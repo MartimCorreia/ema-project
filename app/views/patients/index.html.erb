@@ -35,7 +35,10 @@
       <div class="btn-box d-flex align-items-center justify-content-center">
         <div class="my-procedures col-sm-1 col-md-12 d-flex procedures-box flex-column ps-5">
           <% @patients.each do |patient| %>
-              <%= link_to "##{patient.first_name.capitalize} #{patient.last_name.capitalize}", patient_path(patient), class:"procedure-link" %>
+            <div class="patient-card m-2">
+                <%= image_tag "img_place_holder.jpg", class:"patient-img" %>
+                <%= link_to "##{patient.first_name.capitalize} #{patient.last_name.capitalize}", patient_path(patient)%>
+            </div>
           <% end %>
         </div>
 
