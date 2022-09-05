@@ -1,7 +1,14 @@
 Rails.application.routes.draw do
   devise_for :users
-  root to: "pages#intro"
-  get "dashboard", to: "pages#dashboard"
+
+  unauthenticated :user do
+    root to: "pages#intro"
+  end
+
+  authenticated do
+    root to: "pages#dashboard", as: :authenticated_root
+  end
+
 
   resources :treatments, only: [:index, :show, :new, :create] do
     resources :patients, only: [:new, :create] do
