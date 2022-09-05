@@ -1,10 +1,10 @@
 <div class="container">
   <div class="row">
-    <div class="col-md-4 offset-md-4 col-xs-12 container-outter">
-      <div class="form-box d-flex flex-column align-items-center justify-content-evenly">
-        <div class="indication-box">
+    <div class="col-md-4 offset-md-4 col-xs-12 container-outter d-flex flex-column">
           <h1 class="text-center">Medical Report</h1>
            <p class="text-center small-letters">This form is to be completed by the <br> Doctor's patient.</p>
+      <div class="medical-form d-flex flex-column align-items-center justify-content-evenly">
+        <div class="indication-box">
         </div>
         <%= simple_form_for [@treatment, @patient, @medical_report] do |f| %>
           <%= f.input :hospital %>
