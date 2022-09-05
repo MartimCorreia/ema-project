@@ -5,7 +5,7 @@
   top: 0px;
   position: absolute;
   bottom: 47.16%;
-  background: linear-gradient(180deg, #7e93dc 0%, rgba(0, 34, 154, 0) 100%);
+  background: linear-gradient(180deg, #596bd294 0%, rgba(0, 34, 154, 0) 100%);
 }
 
 .dash-bottom {
@@ -21,13 +21,27 @@
 
 .auto-rotate-img {
   // position: absolute;
-  height: 127px;
-  width: 308px;
+  height: 125px;
+  width: 310px;
   left: 0px;
   top: 0px;
-  background: url(covid-banner.png);
-  box-shadow: 1px 2px 4px 2px rgba(0, 0, 0, 0.25);
+  // background: url(covid-banner.png);
   border-radius: 15px;
+  background-position-x: -5px;
+  background-position-y: -4px;
+  background-repeat: no-repeat;
+  list-style-type: none;
+}
+
+.banner-3 {
+  width: 308px;
+  background-position-x: -5px;
+  background-position-y: -4px;
+}
+
+
+.carousel-inner {
+  transition-property: opacity;
 }
 
 .avatar-place-holder{
