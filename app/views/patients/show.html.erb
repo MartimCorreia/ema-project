@@ -1,6 +1,15 @@
-<div class="container">
-  <div class="report card mt-5 p-3">
-    <h1 class ="text-center">Patient info</h1>
-    <h3><strong>Name:</strong> <%=@patient.first_name.capitalize%>  <%=@patient.last_name.capitalize%></h3>
-    <h3><strong>Age:</strong> <%=@patient.age%></h3>
-    <h3><strong>Medical History:</strong> <%= @patient.medical_history %> </h3>
+<div class="patient-top">
+  <div class="container patient-info">
+    <h3> <strong> Age:</strong> <%= @patient.age %></h3>
+    <h3> <strong>Weight:</strong> <%= @patient.weight %></h3>
+    <h3> <strong>Medical History:</strong> <br> <small> <%= @patient.medical_history %></small></h3>
+  </div>
+</div>
+
+<div class="patient-bottom d-flex flex-column align-items-center justify-content-center">
+  <%= image_tag "patient.png", class:"patientimg" %>
+  <div class="patient-name d-flex flex-column justify-content-center">
+    <h1 class="text-center"> <strong> <%=@patient.first_name.capitalize %> <%=@patient.last_name.capitalize %></strong></h1>
+    <h6 class="text-center">(Patient ID: #<%= @patient.id %>)</h6>
+  </div>
+</div>
