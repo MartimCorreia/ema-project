@@ -13,8 +13,21 @@
 
   <div class="dash-bottom">
     <div class="img-button-container d-flex flex-column align-items-center">
-      <div class="auto-rotate-img mt-5 mb-4">
+      <div class="auto-rotate-img mt-5 mb-4 d-flex justify-content-center align-items-cneter">
 
+        <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-inner">
+            <div class="carousel-item active"  data-bs-interval="6000">
+              <%= image_tag "covid-banner.png", class:"banner-3 d-block w-100" %>
+            </div>
+            <div class="carousel-item"  data-bs-interval="6000">
+              <%= image_tag "ema-banner.png", class:"banner-3 d-block w-100" %>
+            </div>
+            <div class="carousel-item"  data-bs-interval="6000">
+              <%= image_tag "ty-banner.png", class:"banner-3 d-block w-100" %>
+            </div>
+          </div>
+        </div>
       </div>
 
       <h5>Procedures history:</h5>
