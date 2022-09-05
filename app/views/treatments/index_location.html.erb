@@ -1,12 +1,12 @@
-<div class="container">
-  <div class="row">
-    <div class="col-md-4 offset-md-4 col-xs-12">
-      <div class="card-box mt-3 pt-3">
-        <div class="category-title">
-          <h1>Injury Location</h1>
-          <h5>Select your injury place</h5>
-        </div>
-          <%= render "shared/body" %>
+<div class="outer-container">
+  <div class="dash-top">
+    <div class="container d-flex justify-content-evenly align-items-center flex-column py-5 height-adjust">
+      <div class="age-info-box d-flex flex-column align-items-center justify-content-evenly col-sm-1 col-md-12">
+        <h1 class="text-center mb-4">Injury Location</h1>
+        <h6 class="text-center">Select your injury place</h6>
+      </div>
+      <div class="body-box">
+        <%= render "shared/body" %>
       </div>
     </div>
   </div>

@@ -126,8 +126,8 @@
 .adult-age, .child-age {
   background-color: #ffffff;
   text-decoration: none;
-  padding: 15px;
-  border-radius: 15px;
+  padding: 60px;
+  border-radius: 20px;
   font-weight: 600;
   font-size: 45px;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
@@ -161,4 +161,19 @@
   height: 40px;
   -webkit-box-shadow: 2px 2px 9px 0px rgba(0,0,0,0.31);
   box-shadow: 2px 2px 9px 0px rgba(0,0,0,0.31);
+}
+
+.body-box{
+  background-color: #ffffff;
+  text-decoration: none;
+  padding: 10px;
+  border-radius: 20px;
+  font-weight: 600;
+  font-size: 45px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+  opacity: 0.8;
+  width: 300px;
+  height: 580px;
+  position: absolute;
+  top: 180px;
 }

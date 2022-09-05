@@ -1,13 +1,15 @@
-<div class="container image-box d-flex flex-column justify-content-center">
-  <div class="card-category indjury-condition text-center">
-    <% @conditions.each do |condition| %>
-      <div class="card-trip mt-3">
-        <%= cl_image_tag condition.photo.key, height: 300, width: 400, crop: :fill, class:"condition-images mt-3" %>
-        <span>
-          <%= link_to condition.name.capitalize, treatments_path(age_group: params[:age_group], location: params[:location], type: params[:type], condition: condition.name) %>
-          <p>Short description here!</p>
-        </span>
-      </div>
-    <% end %>
+<div class="dash-top">
+  <div class="container image-box d-flex flex-column justify-content-center">
+    <div class="card-category indjury-condition text-center">
+      <% @conditions.each do |condition| %>
+        <div class="card-trip mt-3">
+          <%= cl_image_tag condition.photo.key, height: 300, width: 400, crop: :fill, class:"condition-images mt-3" %>
+          <span>
+            <%= link_to condition.name.capitalize, treatments_path(age_group: params[:age_group], location: params[:location], type: params[:type], condition: condition.name) %>
+            <p>Short description here!</p>
+          </span>
+        </div>
+      <% end %>
+    </div>
   </div>
 </div>
