@@ -10,12 +10,12 @@
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_include_tag "application", "data-turbo-track": "reload", defer: true %>
   </head>
- 
+
   <body>
     <div class="container">
       <div class="row">
         <div class="col-sm-12 p-0">
-          <% unless controller_name == 'sessions' && action_name == 'new' || controller_name == 'pages' && action_name == 'intro' %>
+          <% unless controller_name == 'sessions' && action_name == 'new' || controller_name == 'pages' && action_name == 'intro' || controller_name == "procedures" %>
           <%= render "shared/navbar" %>
           <% end %>
           <%= yield %>

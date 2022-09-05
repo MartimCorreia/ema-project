@@ -8,6 +8,11 @@
   background: linear-gradient(180deg, #7e93dc 0%, rgba(0, 34, 154, 0) 100%);
 }
 
+.dash-top2 {
+  background: linear-gradient(180deg, #7e93dc 0%, rgba(0, 34, 154, 0) 100%);
+
+}
+
 .dash-bottom {
   background: #eceffa;
   border-radius: 40px 40px 0px 0px;
@@ -16,6 +21,14 @@
   left: 0px;
   top: 324px;
   position: absolute;
+  z-index: 1;
+}
+
+.dash-bottom2 {
+  background: #eceffa;
+  border-radius: 40px 40px 0px 0px;
+  height: 520px;
+  width: 390px;
   z-index: 1;
 }
 
@@ -47,7 +60,6 @@
 .info-box {
   margin-top: 15px;
 }
-
 .position-dash-content {
   background-color: rgb(255, 255, 255);
   border-radius: 20px 20px 20px 20px;
@@ -62,6 +74,16 @@
   height: 70px;
   left: 37px;
   top: 285px;
+  background: #79B2E9;
+  border-radius: 30px;
+
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  z-index: 2;
+}
+
+.user-info-box2 {
+  width: 316px;
+  height: 70px;
   background: #79B2E9;
   border-radius: 30px;
 
