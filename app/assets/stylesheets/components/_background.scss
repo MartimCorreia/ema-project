@@ -7,6 +7,7 @@ body {
   background-image: url("login-page.png");
   background-repeat: no-repeat;
   height: 100vh;
+
   position: relative;
 }
 
@@ -14,4 +15,7 @@ body {
   background-image: url("about_page_pic.png");
   background-repeat: no-repeat;
   height: 100vh;
+}
+.login-form{
+  margin-top: 400px;
 }
