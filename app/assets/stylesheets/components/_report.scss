@@ -1,7 +1,56 @@
-.report{
-  border-radius: 20px;
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+.report-top {
+  height: 35%;
+  width: 390px;
+  left: 0px;
+  top: 0px;
+  position: absolute;
+  bottom: 47.16%;
+  border-radius: 0 0 15px 15px;
+  background: #93A5F8;
+  mix-blend-mode: normal;
+  -webkit-box-shadow: 0px 4px 5px -1px rgba(0,0,0,0.46);
+  box-shadow: 0px 4px 5px -1px rgba(0,0,0,0.46);
+  z-index: 1;
 }
+
+.report-bot{
+  background: #eceffa;
+  height: 520px;
+  width: 390px;
+  left: 0px;
+  top: 277px;
+  position: absolute;
+  padding: 15px;
+}
+
+.md-report {
+  height: 154px;
+  width: 154px;
+}
+
+.report-box-container {
+  height: fit-content;
+  width: fit-content;
+  text-align: justify;
+}
+
+.report-box-container >h3 {
+  padding: 10px;
+}
+
+a {
+  text-decoration: none;
+  z-index: 5;
+}
+
+.report-container {
+  border-radius: 20px;
+  background: #FFFFFF;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  margin-top: -65px;
+  background-image: url(doctor-seal.jpg);
+}
+
 .signature img {
   width: 100px;
   margin-left: 50px;
@@ -12,7 +61,14 @@
 .signature p{
   font-size: smaller;
 }
-.report h1{
+
+.report-box-container > h1 {
   color: #77B5EF;
   font-weight: bolder;
+  margin-top: 6px;
+}
+
+.doctor-seal {
+  width: 100px;
+  height: 100px;
 }
