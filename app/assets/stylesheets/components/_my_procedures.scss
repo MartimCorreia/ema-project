@@ -4,17 +4,15 @@
 
 .procedure-link{
   text-align: center;
-  margin-bottom: 20px;
+
   font-family: 'Lato';
   font-size: larger;
   text-decoration: none;
-  color: white;
-  background-color: rgb(132, 182, 223);
-  border-radius: 5px;
+  color: black;
+
   width: 200px;
   height: 40px;
-  -webkit-box-shadow: 2px 2px 9px 0px rgba(0,0,0,0.31);
-  box-shadow: 2px 2px 9px 0px rgba(0,0,0,0.31);
+
   width: fit-content;
   padding: 5px;
 }
@@ -25,4 +23,14 @@
   width: 295px;
   padding: auto;
   padding: 5px;
+}
+.my-procedures1{
+  border-radius: 10px;
+  height: 240px;
+  overflow:auto;
+  width: 295px;
+  padding: auto;
+  padding: 5px;
+  background-color: white;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
