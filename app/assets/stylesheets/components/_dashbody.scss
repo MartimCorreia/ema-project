@@ -115,7 +115,7 @@
 }
 
 .user-info-box > h6 {
-  position: absolute;
+position: absolute;
 left: 33.86%;
 right: 36.39%;
 top: 61.43%;
@@ -134,11 +134,25 @@ color: #FFFFFF;
   margin-right: 187px;
   color: #000000;
   position: absolute;
-  bottom: 298px;
+  bottom: 307px;
   font-family: 'Lato';
   font-style: normal;
   font-weight: 700;
   font-size: 16px;
+  line-height: 19px;
+
+  color: #000000;
+  z-index: 2;
+}
+.img-button-container > h6 {
+  margin-right: 160px;
+  color: #000000;
+  position: absolute;
+  bottom: 285px;
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 13px;
   line-height: 19px;
 
   color: #000000;
