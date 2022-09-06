@@ -32,9 +32,15 @@
       <h5>My Reports:</h5>
 
       <div class="btn-box d-flex align-items-center justify-content-center">
-        <div class="my-procedures col-sm-1 col-md-12 d-flex procedures-box flex-column ps-4">
+        <div class="my-reports col-sm-1 col-md-12 d-flex procedures-box flex-column ps-4">
           <% @medical_reports.each do |medical_report| %>
-              <%= link_to "##{medical_report.patient.first_name.capitalize} #{medical_report.patient.last_name.capitalize}'s report", medical_report_path(medical_report), class:"procedure-link" %>
+          <div class="d-flex align-items-center">
+            <%= image_tag "user2.png", class:"report-img" %>
+              <div class="report-card m-2 pt-4 text-center">
+                <strong><%= link_to "#{medical_report.patient.first_name.capitalize} #{medical_report.patient.last_name.capitalize}'s report", medical_report_path(medical_report), class:"report-link" %></strong>
+                <p><%= medical_report.patient.treatment.created_at.to_s.match(/(\d{4})-(\d{2})-(\d{2}) (\d{2}):(\d{2}):(\d{2})/) %></p>
+              </div>
+            </div>
           <% end %>
         </div>
         </div>
