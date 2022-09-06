@@ -110,7 +110,7 @@ c9.save
 
 file = URI.open("https://res.cloudinary.com/dluisdviu/image/upload/v1661938838/EMA/10_vqbl2g.jpg")
 c10 = Condition.new(name:"amputation", description: "loss of body segment")
-c10.photo.attach(io: file, filename: "Deep_wound.png", content_type:"image/png")
+c10.photo.attach(io: file, filename: "Amputation.png", content_type:"image/png")
 c10.save
 puts "Done."
 
@@ -130,4 +130,28 @@ t3.save
 t4 = Treatment.new(age_group: "child", content: "Protocolo", injury_location_id: il3.id, injury_type_id: it2.id, condition_id: c4.id)
 t4.images.attach(io: URI.open("https://res.cloudinary.com/dluisdviu/image/upload/v1661981398/EMA/Protocolos/queimaduras_up3pfr.pdf"), filename: 'file.pdf')
 t4.save
+
+t5 = Treatment.new(age_group: "adult", content: "Protocolo", injury_location_id: il2.id, injury_type_id: it2.id, condition_id: c9.id)
+t5.images.attach(io: URI.open("https://res.cloudinary.com/dluisdviu/image/upload/v1661981398/EMA/Protocolos/trauma_e4rbgz.pdf"), filename: 'file.pdf')
+t5.save
+
+t6 = Treatment.new(age_group: "adult", content: "Protocolo", injury_location_id: il4.id, injury_type_id: it2.id, condition_id: c4.id)
+t6.images.attach(io: URI.open("https://res.cloudinary.com/dluisdviu/image/upload/v1661981398/EMA/Protocolos/queimaduras_up3pfr.pdf"), filename: 'file.pdf')
+t6.save
+
+t7 = Treatment.new(age_group: "adult", content: "Protocolo", injury_location_id: il4.id, injury_type_id: it2.id, condition_id: c7.id)
+t7.images.attach(io: URI.open("https://res.cloudinary.com/dluisdviu/image/upload/v1661981398/EMA/Protocolos/trauma_e4rbgz.pdf"), filename: 'file.pdf')
+t7.save
+
+t8 = Treatment.new(age_group: "adult", content: "Protocolo", injury_location_id: il4.id, injury_type_id: it2.id, condition_id: c8.id)
+t8.images.attach(io: URI.open("https://res.cloudinary.com/dluisdviu/image/upload/v1661981398/EMA/Protocolos/trauma_e4rbgz.pdf"), filename: 'file.pdf')
+t8.save
+
+t9 = Treatment.new(age_group: "adult", content: "Protocolo", injury_location_id: il4.id, injury_type_id: it2.id, condition_id: c9.id)
+t9.images.attach(io: URI.open("https://res.cloudinary.com/dluisdviu/image/upload/v1661981398/EMA/Protocolos/trauma_e4rbgz.pdf"), filename: 'file.pdf')
+t9.save
+
+t10 = Treatment.new(age_group: "adult", content: "Protocolo", injury_location_id: il4.id, injury_type_id: it2.id, condition_id: c10.id)
+t10.images.attach(io: URI.open("https://res.cloudinary.com/dluisdviu/image/upload/v1661981398/EMA/Protocolos/trauma_e4rbgz.pdf"), filename: 'file.pdf')
+t10.save
 puts "Done."
