@@ -35,16 +35,23 @@
       <div class="btn-box d-flex align-items-center justify-content-center">
         <div class="my-procedures col-sm-1 col-md-12 d-flex procedures-box flex-column ps-5">
           <% @patients.each do |patient| %>
-            <div class="patient-card m-2">
-                <%= image_tag "img_place_holder.jpg", class:"patient-img" %>
-                <%= link_to "##{patient.first_name.capitalize} #{patient.last_name.capitalize}", patient_path(patient)%>
+            <div class="patient-card m-2 d-flex position-relative">
+              <%= image_tag "img_place_holder.jpg", class:"patient-img" %>
+                <div class="patient-info-index d-flex flex-column justify-content-center ms-2 mt-2">
+                  <%= link_to "#{patient.first_name.capitalize} #{patient.last_name.capitalize}", patient_path(patient)%>
+                  <%# <div class="d-flex justify-content-between"> %>
+                    <p>Job</p>
+                  <%# </div> %>
+                </div>
+                    <%= link_to root_path do %>
+                    <i class="fa-solid fa-folder-plus me-3 mb-3 position-absolute bottom-0 end-0 patient-reports"> <%= patient.medical_reports.count %></i>
+                    <% end %>
+
+
             </div>
           <% end %>
         </div>
-
-        </div>
       </div>
-
     </div>
   </div>
 </div>
