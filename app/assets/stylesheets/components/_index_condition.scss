@@ -39,3 +39,9 @@ body {
 .indjury-condition {
   margin-bottom: 65px;
 }
+
+.card-condition {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 16px;
+}
