@@ -6,12 +6,12 @@
      </div>
     <div class="card-condition">
       <div class="card-category indjury-condition text-center">
-        <% @conditions.each do |condition| %>
+        <% @treatments.each do |treatment| %>
           <div class="card-trip mt-3">
-            <%= cl_image_tag condition.photo.key, height: 300, width: 400, crop: :fill, class:"condition-images mt-3" %>
+            <%= cl_image_tag treatment.condition.photo.key, height: 300, width: 400, crop: :fill, class:"condition-images mt-3" %>
             <span>
-              <%= link_to condition.name.capitalize, treatments_path(age_group: params[:age_group], location: params[:location], type: params[:type], condition: condition.name) %>
-              <p> <%= condition.description %></p>
+              <%= link_to treatment.condition.name.capitalize, treatments_path(age_group: params[:age_group], location: params[:location], type: params[:type], condition: treatment.condition.name) %>
+              <p> <%= treatment.condition.description %></p>
             </span>
           </div>
         <% end %>
