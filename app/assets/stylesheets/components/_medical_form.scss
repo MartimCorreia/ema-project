@@ -1,10 +1,64 @@
-  .medical-form{
-    height: fit-content;
-    font-family: lato;
-    height: 31vh;
-    background-color: white;
-    width: fit-content;
-    border-radius: 15px;
-    margin: 0;
-    padding: 10px ;
-  }
+.additional-info-top {
+  height: 35%;
+  width: 390px;
+  left: 0px;
+  top: 0px;
+  position: absolute;
+  bottom: 47.16%;
+  border-radius: 0 0 30px 30px;
+  background: #EA93F8;
+  mix-blend-mode: normal;
+  -webkit-box-shadow: 0px 4px 5px -1px rgba(0,0,0,0.46);
+  box-shadow: 0px 4px 5px -1px rgba(0,0,0,0.46);
+  z-index: 1;
+}
+
+.additional-info-bot {
+  background: #eceffa;
+  height: 520px;
+  width: 390px;
+  left: 0px;
+  top: 277px;
+  position: absolute;
+  padding: 15px;
+}
+
+// .medical-form{
+//     height: fit-content;
+//     font-family: lato;
+//     height: 31vh;
+//     background-color: white;
+//     width: fit-content;
+//     border-radius: 15px;
+//     margin: 0;
+//     padding: 10px ;
+//   }
+
+.medical-form {
+  height: fit-content;
+  background-color: white;
+  border-radius: 15px;
+  padding: 15px;
+  margin-top: 25px;
+  font-family: Lato;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 17px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+
+.medical-form> h1 {
+  color: #EA93F8;
+  font-weight: bolder;
+  margin-top: 6px;
+}
+
+.additional-info-form-border {
+  border: 0;
+  background-color: #f1f1f1;
+  width: 100%;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 100;
+  padding: 8px;
+}
