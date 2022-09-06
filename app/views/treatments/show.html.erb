@@ -16,11 +16,11 @@
         <div class="btn-download d-flex flex-column justify-content-center align-items-center">
           <a href=<%=cl_image_path (@treatment.images.key)%> target="_blank">Download Protocol</a>
         </div>
-        <div class="create-report d-flex flex-column justify-content-center align-items-center">
           <% if params[:completed] != "true" %>
-            <%= link_to "Create Paitent Report", new_treatment_patient_path(@treatment, @patient)%>
+            <div class="create-report d-flex flex-column justify-content-center align-items-center">
+                <%= link_to "Create Paitent Report", new_treatment_patient_path(@treatment, @patient)%>
+            </div>
           <% end %>
-        </div>
       </div>
     </div>
   </div>
