@@ -1,26 +1,96 @@
-.form-box {
-  height: fit-content;
-  font-family: lato;
-  height: 80vh;
-  background-color: white;
-  width: fit-content;
-  border-radius: 15px;
-  margin: 0;
+.paitent-info-top {
+  height: 35%;
+  width: 390px;
+  left: 0px;
+  top: 0px;
+  position: absolute;
+  bottom: 47.16%;
+  border-radius: 0 0 30px 30px;
+  background: #B393F8;
+  mix-blend-mode: normal;
+  -webkit-box-shadow: 0px 4px 5px -1px rgba(0,0,0,0.46);
+  box-shadow: 0px 4px 5px -1px rgba(0,0,0,0.46);
+  z-index: 1;
 }
 
-.indication-box > h1 {
-  font-weight: 700;
-}
-
-.new_patient {
-  height: fit-content;
+.paitent-info-bot {
+  background: #eceffa;
+  height: 520px;
+  width: 390px;
+  left: 0px;
+  top: 277px;
+  position: absolute;
   padding: 15px;
 }
 
-.container-outter {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 87vh;
+.paitent-form-box {
+  height: fit-content;
+  background-color: white;
   border-radius: 15px;
+  padding: 15px;
+  margin-top: 25px;
+  font-family: Lato;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 17px;
+  letter-spacing: 0em;
+  text-align: left;
 }
+
+.paitent-form-box> h1 {
+  color: #9C66E1;
+  font-weight: bolder;
+  margin-top: 6px;
+}
+
+.paitent-form-border {
+  border: 0;
+  background-color: #f1f1f1;
+  width: 100%;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 100;
+  padding: 8px;
+}
+// .bg-circles {
+//   position: absolute;
+//   left: 71.28%;
+//   right: -6.92%;
+//   top: 80.45%;
+//   bottom: 3.08%;
+//   border-radius: 50%;
+//   Width: 139px;
+//   Height: 139px;
+
+//   background: #16EFFD;
+//   opacity: 0.53;
+//   box-shadow: 0px 5px 4px rgba(0, 0, 0, 0.25);
+// }
+
+
+
+// .form-box {
+//   height: fit-content;
+//   font-family: lato;
+//   height: 80vh;
+//   background-color: white;
+//   width: fit-content;
+//   border-radius: 15px;
+//   margin: 0;
+// }
+
+// .indication-box > h1 {
+//   font-weight: 700;
+// }
+
+// .new_patient {
+//   height: fit-content;
+//   padding: 15px;
+// }
+
+// .container-outter {
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+//   height: 87vh;
+//   border-radius: 15px;
+// }

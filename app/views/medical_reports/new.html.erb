@@ -1,18 +1,38 @@
-<div class="container">
-  <div class="row">
-    <div class="col-md-4 offset-md-4 col-xs-12 container-outter d-flex flex-column">
-          <h1 class="text-center">Medical Report</h1>
-           <p class="text-center small-letters">This form is to be completed by the <br> Doctor's patient.</p>
-      <div class="medical-form d-flex flex-column align-items-center justify-content-evenly">
-        <div class="indication-box">
+<div class="whole-additional-info-container">
+  <div class="additional-info-top d-flex justify-content-center align-items-center">
+    <%= image_tag "hospital-icon.png", class:"additional-info" %>
+  </div>
+
+  <div class="additional-info-bot d-flex align-items-center justify-content-center">
+    <div class="additional-info-container">
+      <div class="additional-info-form-box d-flex flex-column align-items-center justify-content-center">
+        <div class="medical-form d-flex flex-column align-items-center justify-content-evenly">
+          <h1 class="text-center">Additional information</h1>
+          <%= simple_form_for [@treatment, @patient, @medical_report] do |f| %>
+
+            <div class="additional-info-form-box-container">
+              <div class="mb-0 mt-3">
+                <%= f.label :hospital %>
+              </div>
+              <div class="mb-2">
+                <%= f.input_field :hospital, class: 'additional-info-form-border' %>
+              </div>
+            </div>
+
+            <div class="additional-info-form-box-container">
+              <div class="mb-0 mt-3">
+                <%= f.label :diagnosis %>
+              </div>
+              <div class="mb-2">
+                <%= f.input_field :diagnosis, class: 'additional-info-form-border' %>
+              </div>
+            </div>
+
+            <div class="btn-container mt-4 d-flex justify-content-center">
+              <%= f.submit :class => 's-btn' %>
+            </div>
+          <% end %>
         </div>
-        <%= simple_form_for [@treatment, @patient, @medical_report] do |f| %>
-          <%= f.input :hospital %>
-          <%= f.input :diagnosis%>
-          <div class="btn-container mt-4 d-flex justify-content-center">
-            <%= f.submit :class => 's-btn' %>
-          </div>
-        <% end %>
       </div>
     </div>
   </div>

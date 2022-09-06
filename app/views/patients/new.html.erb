@@ -1,16 +1,62 @@
-<div class="container">
-  <div class="row">
-    <div class="col-md-4 offset-md-4 col-xs-12 container-outter">
-      <div class="form-box d-flex flex-column align-items-center justify-content-evenly">
-        <div class="indication-box">
-          <h1>Paitent Info</h1>
-        </div>
+<div class="whole-paitent-container">
+  <div class="paitent-info-top d-flex justify-content-center align-items-center">
+    <%= image_tag "paitent-info.png", class:"paitent-report" %>
+  </div>
+
+  <div class="paitent-info-bot">
+    <div class="paitent-container">
+      <div class="paitent-form-box d-flex flex-column align-items-center justify-content-center">
+        <h1 class="text-center">Patient Info</h1>
         <%= simple_form_for [@treatment, @patient] do |f| %>
-          <%= f.input :first_name %>
-          <%= f.input :last_name %>
-          <%= f.input :age %>
-          <%= f.input :weight %>
-          <%= f.input :medical_history%>
+          <div class="paitent-form-box-container">
+            <div class="mb-0 mt-3">
+              <%= f.label :first_name%>
+            </div>
+            <div class="mb-2">
+              <%= f.input_field :first_name, class: 'paitent-form-border' %>
+            </div>
+          </div>
+
+          <div class="paitent-form-box-container">
+            <div class="mb-0">
+              <%= f.label :last_name%>
+            </div>
+
+            <div class="mb-2">
+              <%= f.input_field :last_name, class: 'paitent-form-border'%>
+            </div>
+          </div>
+
+          <div class="paitent-form-box-container">
+            <div class="mb-0">
+              <%= f.label :age%>
+            </div>
+
+            <div class="mb-2">
+              <%= f.input_field :age, class: 'paitent-form-border'%>
+            </div>
+          </div>
+
+          <div class="paitent-form-box-container">
+            <div class="mb-0">
+              <%= f.label :weight%>
+            </div>
+
+            <div class="mb-2">
+              <%= f.input_field :weight, class: 'paitent-form-border'%>
+            </div>
+          </div>
+
+          <div class="paitent-form-box-container">
+            <div class="mb-0">
+              <%= f.label :medical_history%>
+            </div>
+
+            <div class="mb-2">
+              <%= f.input_field :medical_history, class: 'paitent-form-border'%>
+            </div>
+          </div>
+
           <div class="btn-container mt-4 d-flex justify-content-center">
             <%= f.submit :class => 's-btn' %>
           </div>
