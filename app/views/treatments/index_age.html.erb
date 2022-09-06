@@ -1,16 +1,20 @@
-<div class="outer-container">
-  <div class="dash-top">
-    <div class="container d-flex justify-content-evenly align-items-center flex-column py-5 height-adjust">
-      <div class="age-info-box d-flex flex-column align-items-center justify-content-evenly col-sm-1 col-md-12">
-        <h1 class="text-center mb-4">Age Patient</h1>
-        <h6 class="text-center">Select patient age group</h6>
-      </div>
-      <div class="adult-age text-center">
-        <%= link_to "Adult",  treatments_path(age_group: "adult") %>
-      </div>
-      <div class="child-age text-center">
-        <%= link_to "Child",  treatments_path(age_group: "child") %>
-      </div>
+<div class="dash-top-age d-flex align-items-center justify-content-center">
+  <div class="buttons d-flex justify-content-between">
+    <div class="adult-age text-center me-2">
+      <%= link_to "Adult",  treatments_path(age_group: "adult") %>
     </div>
+    <div class="child-age text-center ms-2">
+      <%= link_to "Child",  treatments_path(age_group: "child") %>
+    </div>
+  </div>
+</div>
+
+<div class="dash-bottom-age d-flex flex-column align-items-center justify-content-center">
+  <div class="age-info-box d-flex flex-column align-items-center">
+    <h1 class="text-center">Age Group</h1>
+    <h6 class="text-center">Select patient age group</h6>
+  </div>
+  <div class="age-group-img">
+    <%= image_tag "age_group.png" %>
   </div>
 </div>

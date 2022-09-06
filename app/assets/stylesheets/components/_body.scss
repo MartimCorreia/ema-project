@@ -10,12 +10,12 @@
   cursor: pointer;
 }
 .human-body svg:hover path {
-  fill: #ff7d16;
+  fill: #6FEDD6;
 }
 .human-body svg {
   position: absolute;
   left: 50%;
-  fill: #57c9d5;
+  fill: #ea7922;
 }
 .human-body svg.head {
   margin-left: -28.5px;
@@ -65,4 +65,35 @@
   background-color: transparent;
   width: 86.58px;
   height: 45.07px;
+}
+.dash-top-body{
+  height: 446px;
+  width: 390px;
+  left: 0px;
+  top: 0px;
+  position: absolute;
+  bottom: 47.16%;
+  background: #A2BBFB
+}
+.height-adjust-body {
+  height: 33vh;
+}
+
+.body-info-box > h1 {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 26px;
+
+  color: black;
+}
+
+.body-info-box > h6 {
+font-family: 'Lato';
+font-style: normal;
+font-weight: 700;
+font-size: 22px;
+line-height: 14px;
+color:  black;
 }
