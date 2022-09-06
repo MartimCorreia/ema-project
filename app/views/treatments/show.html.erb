@@ -1,16 +1,23 @@
-<div class="dash-top">
-  <h1 class="text-center mt-5">Please follow every step in this Protocol file. <br> <strong>Use the emergency call if needed </strong><i class="fa-solid fa-phone"></i></h1>
-  <div class="container d-flex justify-content-center looks-margin">
-    <div class="card card-looks p-3">
-      <h1>Result</h1>
-      <p>Treatment Protocol</p>
-      <div class="card-content d-flex flex-column">
-        <a href=<%=cl_image_path (@treatment.images.key)%> target="_blank">Protocol to follow</a>
+<div class="whole-treatment-show-container">
+  <div class="treament-show-top d-flex justify-content-center align-items-center">
+    <%= image_tag "instructions.png", class:"instruction-pic" %>
+  </div>
+
+  <div class="treatment-show-bot d-flex flex-column align-items-center justify-content-evenly">
+    <h1>Instructions to follow</h1>
+
+    <div class="protocol-instruction d-flex align-items-center align-items-center">
+      <h3>
+        Please follow every steps in this Protocol file. Use the emergency call if needed.
+        <i class="fa-solid fa-phone iphone"></i>
+      </h3>
+    </div>
+
+    <div class="btn-download mt-4 d-flex justify-content-center">
+      <a href=<%=cl_image_path (@treatment.images.key)%> target="_blank">Download Protocol</a>
         <% if params[:completed] != "true" %>
           <%= link_to "Make a Report", new_treatment_patient_path(@treatment, @patient) %>
         <% end %>
-      </div>
     </div>
   </div>
 </div>
-  
