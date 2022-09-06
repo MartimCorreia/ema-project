@@ -10,7 +10,7 @@ class TreatmentsController < ApplicationController
       @procedure.save
       redirect_to treatment_path(@procedure.treatment.id, completed: "true")
     elsif !params[:age_group].nil? && !params[:location].nil? && !params[:type].nil?
-      @conditions = Condition.all
+      @treatments = Treatment.joins(:injury_location, :injury_type).where(age_group: params[:age_group], injury_location: { name: params[:location] }, injury_type: { name: params[:type] })
       render "index_condition"
     elsif !params[:age_group].nil? && !params[:location].nil?
       render "index_type"

@@ -115,11 +115,11 @@ c10.save
 puts "Done."
 
 puts "creating treatments..."
-t1 = Treatment.new(age_group: "child", content: "Protocolo", injury_location_id: il1.id, injury_type_id: it1.id, condition_id: c1.id)
+t1 = Treatment.new(age_group: "child", content: "Protocolo", injury_location_id: il2.id, injury_type_id: it1.id, condition_id: c1.id)
 t1.images.attach(io: URI.open("https://res.cloudinary.com/dluisdviu/image/upload/v1661981398/EMA/Protocolos/dispneia_flibk9.pdf"), filename: 'file.pdf')
 t1.save
 
-t2 = Treatment.new(age_group: "adult", content: "Protocolo", injury_location_id: il1.id, injury_type_id: it1.id, condition_id: c2.id)
+t2 = Treatment.new(age_group: "adult", content: "Protocolo", injury_location_id: il2.id, injury_type_id: it1.id, condition_id: c2.id)
 t2.images.attach(io: URI.open("https://res.cloudinary.com/dluisdviu/image/upload/v1661981398/EMA/Protocolos/dor_toracica_oiv7ds.pdf"), filename: 'file.pdf')
 t2.save
 
