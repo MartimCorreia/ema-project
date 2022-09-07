@@ -11,7 +11,7 @@
         <%= image_tag "medical-png.png" %>
       </div>
       <div class="bot-medical-box d-flex align-items-center justify-content-center">
-        <h4><%= link_to "Medical", treatments_path(age_group: params[:age_group], location: params[:location], type: "medical") %></h4>
+        <h4 class="mt-1"><%= link_to "Medical", treatments_path(age_group: params[:age_group], location: params[:location], type: "medical") %></h4>
       </div>
     </div>
 
@@ -20,9 +20,9 @@
         <%= image_tag "trauma-png.png" %>
       </div>
       <div class="bot-trauma-box d-flex align-items-center justify-content-center">
-        <h4><%= link_to "Trauma", treatments_path(age_group: params[:age_group], location: params[:location], type: "trauma") %></h4>
+        <h4 class="mt-1"><%= link_to "Trauma", treatments_path(age_group: params[:age_group], location: params[:location], type: "trauma") %></h4>
       </div>
     </div>
   </div>
-    <%= image_tag "doc-show.png" %>
+    <%= image_tag "doc-show.png", class:"doc-show" %>
 </div>
