@@ -12,7 +12,11 @@
       </div>
         <% @patients.each do |patient| %>
           <div class="patient-card m-2 d-flex position-relative">
-              <%= cl_image_tag patient.photo.key, class:"patient-img" %>
+              <% if !patient.photo.key.nil?  %>
+                <%= cl_image_tag patient.photo.key, class:"patient-img" %>
+              <% else %>
+                <%= image_tag "place-holder.jpg", class:"patient-img" %>
+              <% end %>
                 <div class="patient-info-index d-flex flex-column justify-content-center ms-2 mt-2">
                   <h3> <strong><%= link_to patient.first_name, new_treatment_patient_medical_report_path(@treatment, patient) %></strong></h3>
                   <%# <div class="d-flex justify-content-between"> %>
