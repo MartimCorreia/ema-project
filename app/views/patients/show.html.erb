@@ -2,7 +2,18 @@
   <div class="container patient-info">
     <h3> <strong> Age:</strong> <%= @patient.age %></h3>
     <h3> <strong>Weight:</strong> <%= @patient.weight %></h3>
+    <h3> <strong>Occupation:</strong> <%= @patient.occupation %> </h3>
+    <h3> <strong>Address:</strong> <%= @patient.address %> </h3>
     <h3> <strong>Medical History:</strong> <br> <small> <%= @patient.medical_history %></small></h3>
+  </div>
+    <h3 class="mt-3 ms-2"> <strong><%= @patient.first_name.capitalize %>'s reports</strong></h3>
+  <div class="patient-info-report">
+    <% @patient.medical_reports.each do |report| %>
+
+      <%= link_to medical_report_path(report) do %>
+         <strong>[<%= report.diagnosis %>]</strong> - <%= report.created_at.to_s.match(/(\d{4})-(\d{2})-(\d{2})/)%>
+      <% end %>
+    <% end %>
   </div>
 </div>
 
@@ -12,5 +23,5 @@
     <h1 class="text-center"> <strong> <%=@patient.first_name.capitalize %> <%=@patient.last_name.capitalize %></strong></h1>
     <h6 class="text-center">(Patient ID: #<%= @patient.id %>)</h6>
   </div>
+
 </div>
- 
