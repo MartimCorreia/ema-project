@@ -6,12 +6,24 @@
   <div class="paitent-info-bot">
     <div class="paitent-container">
       <div class="paitent-form-box d-flex flex-column align-items-center justify-content-center">
-        <h1 class="text-center">All Patients</h1>
+        <h1 class="text-center">All Patients:</h1>
         <%= link_to "Create new patient", new_treatment_patient_path(@treatment) %>
-        <% @patients.each do |patient| %>
-          <%= link_to patient.first_name, new_treatment_patient_medical_report_path(@treatment, patient) %>
-        <% end %>
+
       </div>
+        <% @patients.each do |patient| %>
+          <div class="patient-card m-2 d-flex position-relative">
+              <%= cl_image_tag patient.photo.key, class:"patient-img" %>
+                <div class="patient-info-index d-flex flex-column justify-content-center ms-2 mt-2">
+                  <h3> <strong><%= link_to patient.first_name, new_treatment_patient_medical_report_path(@treatment, patient) %></strong></h3>
+                  <%# <div class="d-flex justify-content-between"> %>
+                    <p> <%= patient.occupation %> </p>
+                  <%# </div> %>
+                </div>
+
+
+
+            </div>
+        <% end %>
     </div>
   </div>
 </div>
