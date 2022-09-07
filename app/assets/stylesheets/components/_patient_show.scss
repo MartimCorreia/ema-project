@@ -52,10 +52,12 @@
 .patient-info-report{
   padding: 10px;
   border-radius:0 25px 25px 0;
-
+  height: 20%;
   background-color: white;
+  overflow: scroll;
 
 }
 .patient-info-report a{
   color: black;
+
 }
