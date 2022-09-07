@@ -1,0 +1,17 @@
+<div class="whole-paitent-container">
+  <div class="paitent-info-top d-flex justify-content-center align-items-center">
+    <%= image_tag "paitent-info.png", class:"paitent-report" %>
+  </div>
+
+  <div class="paitent-info-bot">
+    <div class="paitent-container">
+      <div class="paitent-form-box d-flex flex-column align-items-center justify-content-center">
+        <h1 class="text-center">All Patients</h1>
+        <%= link_to "Create new patient", new_treatment_patient_path(@treatment) %>
+        <% @patients.each do |patient| %>
+          <%= link_to patient.first_name, new_treatment_patient_medical_report_path(@treatment, patient) %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>

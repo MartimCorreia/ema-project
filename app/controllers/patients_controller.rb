@@ -24,6 +24,11 @@ class PatientsController < ApplicationController
     @patient = Patient.find(params[:id])
   end
 
+  def select
+    @treatment = Treatment.find(params[:treatment_id])
+    @patients = Patient.all
+  end
+
 
 
   private

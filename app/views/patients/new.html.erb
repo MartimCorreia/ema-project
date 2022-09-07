@@ -7,6 +7,7 @@
     <div class="paitent-container">
       <div class="paitent-form-box d-flex flex-column align-items-center justify-content-center">
         <h1 class="text-center">Patient Info</h1>
+        <%= link_to "test", select_treatment_patients_path(@treatment) %>
         <%= simple_form_for [@treatment, @patient] do |f| %>
           <div class="d-flex align-items-center mt-3">
             <div class="paitent-form-box-container">
@@ -28,24 +29,25 @@
               </div>
             </div>
           </div>
+          <div class="d-flex align-items-center mt-3">
+            <div class="paitent-form-box-container">
+              <div class="mb-0">
+                <%= f.label :age%>
+              </div>
 
-          <div class="paitent-form-box-container">
-            <div class="mb-0">
-              <%= f.label :age%>
+              <div class="mb-2">
+                <%= f.input_field :age, class: 'paitent-form-border'%>
+              </div>
             </div>
 
-            <div class="mb-2">
-              <%= f.input_field :age, class: 'paitent-form-border'%>
-            </div>
-          </div>
+            <div class="paitent-form-box-container">
+              <div class="mb-0">
+                <%= f.label :weight%>
+              </div>
 
-          <div class="paitent-form-box-container">
-            <div class="mb-0">
-              <%= f.label :weight%>
-            </div>
-
-            <div class="mb-2">
-              <%= f.input_field :weight, class: 'paitent-form-border'%>
+              <div class="mb-2">
+                <%= f.input_field :weight, class: 'paitent-form-border'%>
+              </div>
             </div>
           </div>
 
@@ -89,8 +91,10 @@
             </div>
           </div>
 
-          <div class="btn-container mt-4 d-flex justify-content-center">
+          <div class="btn-container mt-4 d-flex align-items-center justify-content-around">
             <%= f.submit :class => 's-btn' %>
+            <h3> <strong> OR </strong></h3>
+            <%= link_to "Existing Patient", select_treatment_patients_path(@treatment), class:"s-btn" %>
           </div>
         <% end %>
       </div>

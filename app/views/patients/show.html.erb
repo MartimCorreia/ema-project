@@ -9,10 +9,13 @@
     <h3 class="mt-3 ms-2"> <strong><%= @patient.first_name.capitalize %>'s reports</strong></h3>
   <div class="patient-info-report">
     <% @patient.medical_reports.each do |report| %>
-
-      <%= link_to medical_report_path(report) do %>
-         <strong>[<%= report.diagnosis %>]</strong> - <%= report.created_at.to_s.match(/(\d{4})-(\d{2})-(\d{2})/)%>
-      <% end %>
+      <div class="patient-reports-scroll">
+        <p>
+        <%= link_to medical_report_path(report) do %>
+          <strong>[<%= report.diagnosis %>]</strong> - <%= report.created_at.to_s.match(/(\d{4})-(\d{2})-(\d{2})/)%>
+        <% end %>
+        </p>
+      </div>
     <% end %>
   </div>
 </div>

@@ -31,15 +31,23 @@
       </div>
 
       <h5>Procedures history:</h5>
-      <h6>#id. -- [ Date & Hour]</h6>
-      <div class="btn-box d-flex align-items-center justify-content-center">
-        <div class="my-procedures1 col-sm-1 col-md-12 d-flex procedures-box flex-column">
-          <% @procedures.each do |procedure| %>
-              <%= link_to "##{procedure.id}. -- [#{procedure.created_at.to_s.match(/(\d{4})-(\d{2})-(\d{2}) (\d{2}):(\d{2}):(\d{2})/)}]", treatment_path(procedure.treatment), class:"procedure-link" %>
-              <hr>
-          <% end %>
+      <%if @procedures != [] %>
+        <h6>#id. -- [ Date & Hour]</h6>
+        <div class="btn-box d-flex align-items-center justify-content-center">
+          <div class="my-procedures1 col-sm-1 col-md-12 d-flex procedures-box flex-column">
+              <% @procedures.each do |procedure| %>
+                  <%= link_to "##{procedure.id}. -- [#{procedure.created_at.to_s.match(/(\d{4})-(\d{2})-(\d{2}) (\d{2}):(\d{2}):(\d{2})/)}]", treatment_path(procedure.treatment), class:"procedure-link" %>
+                  <hr>
+                <% end %>
+
+          </div>
         </div>
-      </div>
+      <% else %>
+      <div class="no-procedures">
+        <h1> No procedures left to be reported.</h1>
+       </div>
+      <% end %>
+
     </div>
   </div>
 </div>
