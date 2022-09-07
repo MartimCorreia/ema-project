@@ -1,5 +1,5 @@
 class ProceduresController < ApplicationController
   def index
-    @procedures = Procedure.all
+    @procedures = current_user.procedures
   end
 end

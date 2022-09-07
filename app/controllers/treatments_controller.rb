@@ -6,7 +6,7 @@ class TreatmentsController < ApplicationController
       @type = InjuryType.where(name: params[:type]).first
       @condition = Condition.where(name: params[:condition]).first
       @treatment = Treatment.where(age_group: params[:age_group], injury_location: @location, injury_type: @type, condition: @condition).first
-      @procedure = Procedure.new(treatment_id: @treatment.id, user_id: current_user.id)
+      @procedure = Procedure.new(treatment: @treatment, user: current_user)
       @procedure.save
       redirect_to treatment_path(@procedure.treatment.id, completed: "true")
     elsif !params[:age_group].nil? && !params[:location].nil? && !params[:type].nil?
