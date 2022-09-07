@@ -1,36 +1,86 @@
-body {
-  background: linear-gradient(293deg, #FFFFFF 0%, #EDF5FD 100%);
+.whole-emergency-container{
+  height: 843px;
+  width: 390px;
+  background: linear-gradient(180deg, #003BDA -125%, rgba(0, 98, 154, 0) 100%);
+  left: 0px;
+  top: 0px;
+  position: absolute;
 }
 
-.medical-trauma-box {
-  height: 88vh;
+.emergency-category-box {
+  height: 107px;
+  width: fit-content;
+  box-shadow: 0px 4px 4px 0px #00000040;
+  background: #FFA984;
+  mix-blend-mode: normal;
+  border-radius: 30px;
+  padding: 20px 48px;
+  margin-top: 35px;
+  margin-bottom: 60px;
 }
 
-.medical-img, .trauma {
-  width: 100%;
-  border-radius: 10px;
-  height: 172px;
-  filter: brightness(0.5);
-  opacity: 0.9;
+.emergency-category-box > h1 {
+  font-family: Lato;
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 34px;
+  color: black;
 }
 
-.medical-h2 a, .trauma-h2 a {
-  text-decoration: none;
-  color: linear-gradient(180deg, #77B5EF 0%, #1B549C 100%);
+.emergency-category-box > h5 {
+  font-family: Lato;
+  font-size: 20px;
   font-weight: 600;
-  font-size: x-large;
-  font-family: 'Lato';
+  line-height: 24px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #707070;
 }
 
-
-.medical-h2, .trauma-h2 {
-  margin-bottom: 0;
-  padding: 10px;
+.medical-or-trauma-box {
+  margin-right: 12px;
 }
 
-.img-outer-box {
+.top-medical-box  {
+  border-radius: 20px 20px 0 0;
   background-color: white;
-  border-radius: 10px;
-  padding: 12px;
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+  height: 139px;
+  width: 173px;
+}
+
+.bot-medical-box > h4 {
+  font-family: Lato;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 24px;
+  text-shadow: 0px 1px 19px rgba(0, 0, 0, 0.25);
+}
+
+.bot-medical-box  {
+  border-radius: 0 0 20px 20px;
+  background-color: #E3E3E3;
+  height: 34px;
+  width: 173px;
+}
+
+.top-trauma-box  {
+  border-radius: 20px 20px 0 0;
+  background-color: white;
+  height: 139px;
+  width: 173px;
+}
+
+.bot-trauma-box > h4 {
+  font-family: Lato;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 24px;
+  text-shadow: 0px 1px 19px rgba(0, 0, 0, 0.25);
+}
+
+.bot-trauma-box  {
+  border-radius: 0 0 20px 20px;
+  background-color: #E3E3E3;
+  height: 34px;
+  width: 173px;
 }
