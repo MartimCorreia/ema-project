@@ -8,22 +8,24 @@
       <div class="paitent-form-box d-flex flex-column align-items-center justify-content-center">
         <h1 class="text-center">Patient Info</h1>
         <%= simple_form_for [@treatment, @patient] do |f| %>
-          <div class="paitent-form-box-container">
-            <div class="mb-0 mt-3">
-              <%= f.label :first_name%>
-            </div>
-            <div class="mb-2">
-              <%= f.input_field :first_name, class: 'paitent-form-border' %>
-            </div>
-          </div>
-
-          <div class="paitent-form-box-container">
-            <div class="mb-0">
-              <%= f.label :last_name%>
+          <div class="d-flex align-items-center mt-3">
+            <div class="paitent-form-box-container">
+              <div class="">
+                <%= f.label :first_name%>
+              </div>
+              <div class="mb-2">
+                <%= f.input_field :first_name, class: 'paitent-form-border' %>
+              </div>
             </div>
 
-            <div class="mb-2">
-              <%= f.input_field :last_name, class: 'paitent-form-border'%>
+            <div class="paitent-form-box-container">
+              <div class="mb-0">
+                <%= f.label :last_name%>
+              </div>
+
+              <div class="mb-2">
+                <%= f.input_field :last_name, class: 'paitent-form-border'%>
+              </div>
             </div>
           </div>
 
@@ -49,11 +51,41 @@
 
           <div class="paitent-form-box-container">
             <div class="mb-0">
+              <%= f.label :occupation%>
+            </div>
+
+              <div class="mb-2">
+                <%= f.input_field :occupation, class: 'paitent-form-border'%>
+              </div>
+          </div>
+
+             <div class="paitent-form-box-container">
+            <div class="mb-0">
+              <%= f.label :address%>
+            </div>
+
+              <div class="mb-2">
+                <%= f.input_field :address, class: 'paitent-form-border'%>
+              </div>
+          </div>
+
+          <div class="paitent-form-box-container">
+            <div class="mb-0">
               <%= f.label :medical_history%>
             </div>
 
             <div class="mb-2">
               <%= f.input_field :medical_history, class: 'paitent-form-border'%>
+            </div>
+          </div>
+
+          <div class="paitent-form-box-container">
+            <div class="mb-0">
+              <%= f.label :photo%>
+            </div>
+
+            <div class="mb-2">
+              <%= f.input_field :photo, as: :file, class: 'paitent-form-border'%>
             </div>
           </div>
 
