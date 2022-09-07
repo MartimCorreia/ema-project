@@ -1,21 +1,26 @@
-  <div class="dash-top d-flex flex-column justify-content-between">
-      <div class="p-2 condition-info-box">
-        <h1 class="text-center mb-4">Condition</h1>
-        <h6 class="text-center">Select a condition</h6>
-     </div>
-    <div class="p-2 card-condition flex-grow-1">
-      <div class="card-category indjury-condition text-center">
-        <% @treatments.each do |treatment| %>
-          <div class="card-trip mt-3">
-            <%= cl_image_tag treatment.condition.photo.key, height: 300, width: 400, crop: :fill, class:"condition-images mt-3" %>
-            <span>
-              <%= link_to treatment.condition.name.capitalize, treatments_path(age_group: params[:age_group], location: params[:location], type: params[:type], condition: treatment.condition.name) %>
-              <p> <%= treatment.condition.description %></p>
-            </span>
+<div class="whole-index-condition-container d-flex flex-column align-items-center">
+
+  <div class="index-condition-category-box d-flex flex-column align-items-center justify-content-center">
+    <h1>Condtion</h1>
+    <h5>(Select the type of condition)</h5>
+  </div>
+
+  <div class="index-condition align-items-center">
+    <div class="row">
+      <% @treatments.each do |treatment| %>
+        <div class="col-6">
+          <div class="condition-whole-box">
+            <div class="condition-top-box">
+              <div class="top-condition-pic">
+                <%= cl_image_tag treatment.condition.photo.key, height: 300, width: 400, crop: :fill, class:"condition-images" %>
+              </div>
+            </div>
+            <div class="condition-bot-box text-center">
+              <h4><%= link_to treatment.condition.name.capitalize, treatments_path(age_group: params[:age_group], location: params[:location], type: params[:type], condition: treatment.condition.name) %></h4>
+            </div>
           </div>
-        <% end %>
-      </div>
-    </div>
+        </div>
+      <% end %>
     </div>
   </div>
 </div>
