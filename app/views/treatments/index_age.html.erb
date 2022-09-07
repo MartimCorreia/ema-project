@@ -1,20 +1,28 @@
-<div class="dash-top-age d-flex align-items-center justify-content-center">
-  <div class="buttons d-flex justify-content-between">
-    <div class="adult-age text-center me-2">
-      <%= link_to "Adult",  treatments_path(age_group: "adult") %>
-    </div>
-    <div class="child-age text-center ms-2">
-      <%= link_to "Child",  treatments_path(age_group: "child") %>
-    </div>
-  </div>
-</div>
+<div class="whole-age-container d-flex flex-column align-items-center justify-content-evenly">
 
-<div class="dash-bottom-age d-flex flex-column align-items-center justify-content-center">
-  <div class="age-info-box d-flex flex-column align-items-center">
-    <h1 class="text-center">Age Group</h1>
-    <h6 class="text-center">Select patient age group</h6>
+  <div class="patient-category-box d-flex flex-column align-items-center justify-content-center">
+    <h1>Patient Category</h1>
+    <h5>(Select patient age group)</h5>
   </div>
-  <div class="age-group-img">
-    <%= image_tag "age_group.png" %>
+
+  <div class="child-or-adult d-flex align-items-center justify-content-center">
+    <div class="child-patient-box">
+      <div class="top-child-box d-flex align-items-center justify-content-center">
+        <%= image_tag "naughty-kids.png" %>
+      </div>
+      <div class="bot-child-box d-flex align-items-center justify-content-center">
+        <h4 class="">Child</h4>
+      </div>
+    </div>
+
+    <div class="adult-patient-box">
+      <div class="top-adult-box d-flex align-items-center justify-content-center">
+        <%= image_tag "naughty-adults.png" %>
+      </div>
+      <div class="bot-adult-box d-flex align-items-center justify-content-center">
+        <h4 class="">Adult</h4>
+      </div>
+    </div>
   </div>
+    <%= image_tag "finger.png" %>
 </div>
