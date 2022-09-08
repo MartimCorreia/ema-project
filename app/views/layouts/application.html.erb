@@ -50,16 +50,15 @@
   <body>
     <div class="container">
       <div class="row">
-        <div class="col-sm-12 p-0">
+
           <% unless controller_name == 'sessions' && action_name == 'new' || controller_name == 'pages' && action_name == 'intro' %>
           <%= render "shared/navbar" %>
           <% end %>
           <%= yield %>
           <%= render "shared/flashes" %>
-        </div>
+
       </div>
     </div>
-  </body>
     <div class="bottom-navbar">
           <% unless controller_name == 'sessions' && action_name == 'new' || controller_name == 'pages' && action_name == 'intro' %>
           <%= render "shared/footer" %>
@@ -68,4 +67,5 @@
         </div>
       </div>
     </div>
+  </body>
 </html>
