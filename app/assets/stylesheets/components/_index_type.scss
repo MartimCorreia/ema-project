@@ -9,7 +9,7 @@
 
 .emergency-category-box {
   height: 107px;
-  width: fit-content;
+  width: 97%;
   box-shadow: 0px 4px 4px 0px #00000040;
   background: #FFA984;
   mix-blend-mode: normal;
@@ -29,7 +29,7 @@
 
 .emergency-category-box > h5 {
   font-family: Lato;
-  font-size: 20px;
+  font-size: 17px;
   font-weight: 600;
   line-height: 24px;
   letter-spacing: 0em;
@@ -45,8 +45,8 @@
 .top-medical-box  {
   border-radius: 20px 20px 0 0;
   background-color: white;
-  height: 139px;
-  width: 173px;
+  height: 133px;
+  width: 161px;
 }
 
 .bot-medical-box > h4 {
@@ -65,7 +65,7 @@
   border-radius: 0 0 20px 20px;
   background-color: #E3E3E3;
   height: 34px;
-  width: 173px;
+  width: 161px;
 }
 
 .trauma-whole-box {
@@ -75,8 +75,8 @@
 .top-trauma-box  {
   border-radius: 20px 20px 0 0;
   background-color: white;
-  height: 139px;
-  width: 173px;
+  height: 133px;
+  width: 161px;
 }
 
 .bot-trauma-box > h4 {
@@ -95,11 +95,11 @@
   border-radius: 0 0 20px 20px;
   background-color: #E3E3E3;
   height: 34px;
-  width: 173px;
+  width: 161px;
 }
 
 .doc-show {
-  margin-left: 110px;
+  margin-left: 23%;
 }
 
 .medical-whole-box:active, .trauma-whole-box:active {
