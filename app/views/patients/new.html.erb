@@ -4,7 +4,7 @@
   </div>
 
   <div class="paitent-info-bot">
-    <div class="paitent-container">
+    <div class="paitent-container mt-4">
       <div class="paitent-form-box d-flex flex-column align-items-center justify-content-center">
         <h1 class="text-center">Patient Info</h1>
         <%= simple_form_for [@treatment, @patient] do |f| %>
@@ -50,23 +50,25 @@
             </div>
           </div>
 
-          <div class="paitent-form-box-container">
-            <div class="mb-0">
-              <%= f.label :occupation%>
+          <div class="d-flex align-items-center mt-3">
+            <div class="paitent-form-box-container">
+              <div class="mb-0">
+                <%= f.label :occupation%>
+              </div>
+
+                <div class="mb-2">
+                  <%= f.input_field :occupation, class: 'paitent-form-border'%>
+                </div>
             </div>
+
+            <div class="paitent-form-box-container">
+              <div class="mb-0">
+                <%= f.label :address%>
+              </div>
 
               <div class="mb-2">
-                <%= f.input_field :occupation, class: 'paitent-form-border'%>
+                <%= f.input_field :address, class: 'paitent-form-border'%>
               </div>
-          </div>
-
-          <div class="paitent-form-box-container">
-            <div class="mb-0">
-              <%= f.label :address%>
-            </div>
-
-            <div class="mb-2">
-              <%= f.input_field :address, class: 'paitent-form-border'%>
             </div>
           </div>
 
@@ -90,9 +92,9 @@
             </div>
           </div>
 
-          <div class="btn-container mt-4 d-flex align-items-center justify-content-around">
+          <div class="btn-container d-flex align-items-center justify-content-around">
             <%= f.submit :class => 's-btn' %>
-            <h4> <strong> OR </strong></h4>
+            <h6 class="mx-1"> OR </h6>
             <%= link_to "Existing Patient", select_treatment_patients_path(@treatment), class:"s-btn" %>
           </div>
         <% end %>
