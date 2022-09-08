@@ -1,13 +1,15 @@
-<div class="bg-color-intro">
-  <div class="big-box d-flex flex-column align-items-center">
-    <div class="description-box">
-      <h1 class="text-center">Welcome to EMA</h1>
-      <h3>Official Emergency Application that helps doctors to be more efficient when dealing with emergency situations.</h3>
+
+  <div class="bg-color-intro">
+    <div class="big-box d-flex flex-column align-items-center">
+      <div class="description-box">
+        <h1 class="text-center">Welcome to EMA</h1>
+        <h3>Official Emergency Application that helps doctors to be more efficient when dealing with emergency situations.</h3>
+      </div>
+    </div>
+    <div class='intro d-flex align-items-end flex-column'>
+      <%= link_to user_session_path, class: "right-arrow" do %>
+        <%= image_tag "right_arrow.png" %>
+      <% end %>
     </div>
   </div>
-  <div class='intro d-flex align-items-end flex-column'>
-    <%= link_to user_session_path, class: "right-arrow" do %>
-      <%= image_tag "right_arrow.png" %>
-    <% end %>
-  </div>
-</div>
+
