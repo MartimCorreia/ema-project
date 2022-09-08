@@ -77,6 +77,11 @@
   text-shadow: 0px 1px 5px rgba(0, 0, 0, 0.25);
 }
 
+.procedure-box:active, .paitent-box:active, .treatment-box:active, .report-box:active {
+  box-shadow: 0 1px rgb(184, 184, 184);
+  transform: translateY(4px);
+}
+
 .report-box {
   background: #FF85BF;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
@@ -135,7 +140,8 @@
   opacity: 0.8;
   width: fit-content;
 }
-.adult-age{
+
+.adult-age {
   flex-grow: 1;
 }
 
@@ -167,7 +173,7 @@
   box-shadow: 2px 2px 9px 0px rgba(0,0,0,0.31);
 }
 
-.body-box{
+.body-box {
   background: #BBE5C5;
   border-radius: 40px 40px 0px 0px;
   height: 144%;
@@ -176,4 +182,9 @@
   top: 224px;
   position: absolute;
   z-index: 1;
+}
+
+.s-btn:active {
+  box-shadow: 0 1px rgb(184, 184, 184);
+  transform: translateY(4px);
 }

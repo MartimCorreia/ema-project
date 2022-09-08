@@ -101,3 +101,8 @@
 .doc-show {
   margin-left: 123px;
 }
+
+.medical-whole-box:active, .trauma-whole-box:active {
+  box-shadow: 0 1px rgb(184, 184, 184);
+  transform: translateY(4px);
+}

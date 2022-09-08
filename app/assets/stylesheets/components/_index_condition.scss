@@ -118,3 +118,8 @@ font-size: 22px;
 line-height: 14px;
 color: #868A91;
 }
+
+.condition-whole-box:active {
+  box-shadow: 0 1px rgb(184, 184, 184);
+  transform: translateY(4px);
+}
