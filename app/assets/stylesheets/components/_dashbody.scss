@@ -2,9 +2,9 @@
   height: 35%;
   width: 100%;
   left: 0px;
-  top: 0px;
+  top: -57px;
   position: absolute;
-  bottom: 47.16%;
+
   background: linear-gradient(180deg, #596bd294 0%, rgba(0, 34, 154, 0) 100%);
 }
 
@@ -15,10 +15,10 @@
 .dash-bottom {
   background: #eceffa;
   border-radius: 40px 40px 0px 0px;
-  height: 61%;
+  height: 60%;
   width: 100%;
   left: 0px;
-  top: 324px;
+  top: 221px;
   position: absolute;
   z-index: 1;
 }
@@ -32,12 +32,9 @@
 }
 
 .auto-rotate-img {
-  // position: absolute;
   height: 125px;
   width: 310px;
-  left: 0px;
-  top: 0px;
-  // background: url(covid-banner.png);
+  margin-top: 8%;
   border-radius: 15px;
   background-position-x: -5px;
   background-position-y: -4px;
@@ -45,8 +42,9 @@
   list-style-type: none;
 }
 
+
 .banner-3 {
-  width: 308px;
+  width: 72%;
   background-position-x: -5px;
   background-position-y: -4px;
 }
@@ -59,10 +57,11 @@
 
 .avatar-place-holder{
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  width: 41%;
 }
 .profile-box {
   text-align: center;
-  height: 300px;
+  height: 313px;
   margin-top: 45px;
 }
 
@@ -78,8 +77,8 @@
 }
 
 .user-info-box {
-  width: 316px;
-  height: 70px;
+  width: 276px;
+  height: 55px;
   background: #79B2E9;
   border-radius: 30px;
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
@@ -158,4 +157,7 @@ color: #FFFFFF;
 
 .top-button-box {
   margin-right: 43px;
+}
+.carousel-item{
+  margin-left: 15%;
 }
