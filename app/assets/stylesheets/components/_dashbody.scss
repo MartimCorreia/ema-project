@@ -1,6 +1,6 @@
 .dash-top{
   height: 446px;
-  width: 390px;
+  width: 100%;
   left: 0px;
   top: 0px;
   position: absolute;
@@ -15,8 +15,8 @@
 .dash-bottom {
   background: #eceffa;
   border-radius: 40px 40px 0px 0px;
-  height: 520px;
-  width: 390px;
+  height: 100%;
+  width: 100%;
   left: 0px;
   top: 324px;
   position: absolute;
@@ -56,13 +56,9 @@
   transition-property: opacity;
 }
 
-// .avatar-place-holder{
-//   border-radius: 50%;
-//   width: 280px;
-//   height: 280px;
-//   object-fit: cover;
-//   box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
-// }
+.avatar-place-holder{
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
 
 .profile-box {
   text-align: center;
@@ -82,11 +78,8 @@
 }
 
 .user-info-box {
-  position: absolute;
   width: 316px;
   height: 70px;
-  left: 37px;
-  top: 285px;
   background: #79B2E9;
   border-radius: 30px;
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
@@ -133,8 +126,8 @@ color: #FFFFFF;
 .img-button-container > h5 {
   margin-right: 187px;
   color: #000000;
-  position: absolute;
-  bottom: 307px;
+
+
   font-family: 'Lato';
   font-style: normal;
   font-weight: 700;
@@ -159,8 +152,8 @@ color: #FFFFFF;
   z-index: 2;
 }
 
-.btn-box {
-  margin-top: 29px;
+.dashboard-info h5{
+  font-family: "Lato";
 }
 
 .top-button-box {
