@@ -37,6 +37,11 @@ opacity:0.4;
   text-align: center;
 }
 
+.navbar-nav:active .dropdown-menu:active {
+  box-shadow: 0 1px rgb(184, 184, 184);
+  transform: translateY(4px);
+}
+
 .dropdown-item{
   color: #1DA1F2;
 }
