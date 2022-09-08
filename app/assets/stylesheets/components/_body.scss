@@ -4,48 +4,66 @@
   padding-top: 240px;
   height: 260px;
   display: block;
-  margin: 40px auto;
 }
+
 .human-body svg:hover {
   cursor: pointer;
 }
+
 .human-body svg:hover path {
   fill: #6FEDD6;
 }
+
 .human-body svg {
   position: absolute;
   left: 50%;
   fill: #ea7922;
 }
+
 .human-body svg.head {
-  margin-left: -28.5px;
-  top: -6px;
+  margin-left: -20.5px;
+  top: 25px;
+  width: 38px;
+  height: 82px;
 }
+
 .human-body svg.torax2 {
-  margin-left: -53.5px;
-  top: 69px;
+  margin-left: -40.5px;
+  top: 80px;
+  width: 81px;
 }
+
 .human-body svg.arm {
-  margin-left: -78px;
-  top: 112px;
+  margin-left: -57px;
+  top: 98px;
+  width: 114px;
 }
+
 .human-body svg.torax {
-  margin-left: -43.5px;
-  top: 88px;
+  margin-left: -31.5px;
+  top: 93px;
+  width: 63px;
 }
+
 .human-body svg.abdomen {
   margin-left: -37.5px;
   top: 130px;
+  height: 68px;
 }
+
 .human-body svg.leg {
-  margin-left: -46.5px;
-  top: 205px;
+  margin-left: -46px;
+  top: 179px;
   z-index: 9999;
+  height: 178px;
 }
+
 .human-body svg.arm2 {
-  margin-left: -102.5px;
-  top: 224px;
+  margin-left: -74.5px;
+  top: 191px;
+  width: 149px;
 }
+
 #area {
   display: block;
   width: 100%;
