@@ -1,37 +1,43 @@
 <div class="whole-dahs-container">
-  <div class="dash-top">
-    <div class="profile-box d-flex flex-column align-items-center justify-content-evenly">
-      <%# <%= image_tag "bw-img.png" %>
-      <%= cl_image_tag current_user.photo.key, class:"avatar-place-holder" %>
-      <div class="user-info-box">
-        <h1 class="text-center mb-4">Dr. &nbsp<%=current_user.first_name %> <%=current_user.last_name %></h1>
-        <h6 class="text-center">(Doctor ID: #<%= current_user.id %>)</h6>
+
+  <div class="col-12">
+    <div class="dash-top">
+      <div class="profile-box d-flex flex-column align-items-center justify-content-center">
+        <%# <%= image_tag "bw-img.png" %>
+        <%= cl_image_tag current_user.photo.key, class:"avatar-place-holder" %>
+        <div class="user-info-box">
+          <h1 class="text-center mb-4">Dr. &nbsp<%=current_user.first_name %> <%=current_user.last_name %></h1>
+          <h6 class="text-center">(Doctor ID: #<%= current_user.id %>)</h6>
+        </div>
       </div>
     </div>
   </div>
 
-  <div class="dash-bottom">
-    <div class="img-button-container d-flex flex-column align-items-center">
-      <div class="auto-rotate-img mt-5 mb-4 d-flex justify-content-center align-items-cneter">
-
-        <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
-          <div class="carousel-inner">
-            <div class="carousel-item active"  data-bs-interval="6000">
-              <%= image_tag "covid-banner.png", class:"banner-3 d-block w-100" %>
-            </div>
-            <div class="carousel-item"  data-bs-interval="6000">
-              <%= image_tag "ema-banner.png", class:"banner-3 d-block w-100" %>
-            </div>
-            <div class="carousel-item"  data-bs-interval="6000">
-              <%= image_tag "ty-banner.png", class:"banner-3 d-block w-100" %>
+ <div class="bot">
+    <div class="col-12">
+      <div class="dash-bottom">
+        <div class="img-button-container d-flex flex-column align-items-center">
+          <div class="auto-rotate-img d-flex justify-content-center align-items-center">
+            <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+              <div class="carousel-inner">
+                <div class="carousel-item active"  data-bs-interval="6000">
+                  <%= image_tag "covid-banner.png", class:"banner-3 d-block" %>
+                </div>
+                <div class="carousel-item"  data-bs-interval="6000">
+                  <%= image_tag "ema-banner.png", class:"banner-3 d-block" %>
+                </div>
+                <div class="carousel-item"  data-bs-interval="6000">
+                  <%= image_tag "ty-banner.png", class:"banner-3 d-block" %>
+                </div>
+              </div>
             </div>
           </div>
         </div>
-      </div>
 
-      <h5>Procedures history:</h5>
+
+      <h5 class="ms-5" style="font-family:Lato;">Procedures history:</h5>
       <%if @procedures != [] %>
-        <h6>#id. -- [ Date & Hour]</h6>
+        <h6 class="ms-5" style="font-family:Lato;">#id. -- [ Date & Hour]</h6>
         <div class="btn-box d-flex align-items-center justify-content-center">
           <div class="my-procedures1 col-sm-1 col-md-12 d-flex procedures-box flex-column">
               <% @procedures.each do |procedure| %>
