@@ -31,3 +31,8 @@
 .report-link{
   position: relative;
 }
+
+.each-report:active {
+  box-shadow: 0 1px rgb(184, 184, 184);
+  transform: translateY(4px);
+}
