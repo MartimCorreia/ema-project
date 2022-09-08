@@ -125,3 +125,8 @@
   left: -230px;
   //opacity: 0;
 }
+
+.head:active, .torax:active, .arm:active, .torax:active, .adbomen:active, .leg:active {
+  box-shadow: 0 1px rgb(184, 184, 184);
+  transform: translateY(4px);
+}

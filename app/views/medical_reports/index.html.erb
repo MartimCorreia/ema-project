@@ -34,7 +34,7 @@
       <div class="btn-box d-flex align-items-center justify-content-center">
         <div class="my-reports col-sm-1 col-md-12 d-flex procedures-box flex-column ps-4">
           <% @medical_reports.each do |medical_report| %>
-          <div class="d-flex align-items-center">
+          <div class="d-flex align-items-center each-report">
             <%= image_tag "user2.png", class:"report-img" %>
               <div class="report-card m-2 pt-4 text-center">
                 <strong><%= link_to "#{medical_report.patient.first_name.capitalize} #{medical_report.patient.last_name.capitalize}'s report", medical_report_path(medical_report), class:"report-link" %></strong>
