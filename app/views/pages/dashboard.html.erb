@@ -6,7 +6,7 @@
         <%# <%= image_tag "bw-img.png" %>
         <%= cl_image_tag current_user.photo.key, class:"avatar-place-holder" %>
         <div class="user-info-box">
-          <h1 class="text-center mb-4">Dr. &nbsp<%=@user.first_name %> <%=@user.last_name %></h1>
+          <h1 class="text-center">Dr. &nbsp<%=@user.first_name %> <%=@user.last_name %></h1>
           <h6 class="text-center">(Doctor ID: #<%= @user.id %>)</h6>
         </div>
       </div>
