@@ -21,12 +21,7 @@
     <meta name="theme-color" content="#ffffff">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <%= csrf_meta_tags %>
-    <% %w(57 60 72 76 114 120 144 152 180).each do |s| %>
-      <%= favicon_link_tag "apple-touch-icon-#{s}x#{s}.png", rel: 'apple-touch-icon', type: 'image/png', sizes: "#{s}x#{s}" %>
-    <% end %>
-    <% %w(16 32).each do |s| %>
-      <%= favicon_link_tag "favicon-#{s}x#{s}.png", rel: 'icon', type: 'image/png', sizes: "#{s}x#{s}" %>
-    <% end %>
+ 
     <%= csp_meta_tag %>
     <script src="https://kit.fontawesome.com/c4184662af.js" crossorigin="anonymous"></script>
     <title><%= meta_title %></title>
