@@ -49,7 +49,7 @@
                   <div class="patient-info-index d-flex flex-column justify-content-center ms-2 mt-2">
                     <h3> <strong><%= link_to "#{patient.first_name.capitalize} #{patient.last_name.capitalize}", patient_path(patient)%></strong></h3>
                     <%# <div class="d-flex justify-content-between"> %>
-                      <p> <%= patient.occupation %> </p>
+                      <p> Patient's id: #<%= patient.id %> </p>
                     <%# </div> %>
                   </div>
 
