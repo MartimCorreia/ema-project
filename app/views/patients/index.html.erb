@@ -35,6 +35,17 @@
           </div>
         </div>
 
+        <div class="search-bar">
+          <%= form_with url: patients_path, method: :get, class: "d-flex" do %>
+            <%= text_field_tag :query,
+            params[:query],
+            class: "form-control",
+            placeholder: "Find a patient"
+            %>
+            <%= submit_tag "Search", class: "btn btn-primary" %>
+          <% end %>
+         </div>
+
         <h5 class="ms-5" style="font-family:Lato;">My patients:</h5>
 
         <div class="btn-box d-flex align-items-center justify-content-center">

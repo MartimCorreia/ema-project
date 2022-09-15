@@ -5,19 +5,34 @@ body {
 }
 
 .bg-color {
-  background-image: url("login-page.png");
-  background-repeat: no-repeat;
-  background-size:cover;
+  background: url("login-page2.png") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-position-y: 1%;
+
   height: 100vh;
 
-  
 }
 
 .bg-color-intro {
-  background-image: url("about_page_pic.png");
-  background-repeat: no-repeat;
-  background-size:cover;
+  background-image: url("about_page_pic2.png");
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 .login-form{
-  margin-top: 400px;
+  margin-bottom: 30px;
+}
+.intro{
+  background: url("wide-bg-intro.png") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-position-y: 1%;
+  background-position-x: 62%;
+  height: 100vh;
 }

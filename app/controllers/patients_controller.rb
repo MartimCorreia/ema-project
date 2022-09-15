@@ -2,6 +2,16 @@ class PatientsController < ApplicationController
 
   def index
     @patients = current_user.patients
+
+    if params[:query].present?
+      sql_query = <<~SQL
+      patients.first_name @@ :query
+      OR patients.last_name @@ :query
+      SQL
+      @patients = Patient.where(sql_query, query: "%#{params[:query]}%")
+    else
+      @patients = current_user.patients
+    end
   end
 
   def new
