@@ -1,10 +1,12 @@
-<div class="whole-treatment-show-container">
-  <div class="treament-show-top d-flex justify-content-center align-items-center">
-    <%= image_tag "instructions.png", class:"instruction-pic" %>
+<div class="whole-treat-show d-flex flex-column justify-content-evenly">
+ <% unless controller_name == 'sessions' && action_name == 'new' || controller_name == 'pages' && action_name == 'intro' %>
+    <%= render "shared/navbar" %>
+  <% end %>
+<div class="d-flex justify-content-center align-items-center">
+  <%= image_tag "instructions.png", class:"instruction-pic" %>
   </div>
-
-  <div class="treatment-show-bot d-flex flex-column align-items-center justify-content-evenly">
-    <h1>Instructions to follow</h1>
+  <div class="treat-show-bot d-flex flex-column align-items-center justify-content-start">
+   <h1 class="mt-5">Instructions to follow</h1>
 
     <div class="protocol-instruction d-flex flex-column align-items-center justify-content-center">
       <h3>
