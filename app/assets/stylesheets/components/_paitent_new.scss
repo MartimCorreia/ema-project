@@ -23,18 +23,21 @@
   padding: 15px;
 }
 
+
 .paitent-form-box {
-  height: fit-content;
-  background-color: white;
-  border-radius: 15px;
-  padding: 15px 15px 0 15px;
-  margin-top: -3%;
-  font-family: Lato;
-  font-size: 14px;
-  font-weight: 700;
-  line-height: 17px;
-  letter-spacing: 0em;
-  text-align: left;
+
+    height: 436px;
+    background-color: white;
+    border-radius: 0 0 15px 15px;
+    padding: 0 15px 0 15px;
+    margin-top: -2%;
+    font-family: Lato;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 17px;
+    letter-spacing: 0em;
+    text-align: left;
+    max-width: 80%;
 }
 .paitent-form-box1 {
   height: fit-content;
@@ -53,6 +56,7 @@
 .paitent-form-box> h1 {
   color: #9C66E1;
   font-weight: bolder;
+  margin: 0;
 }
 .paitent-form-box1  > h1 {
   color: #9C66E1;
@@ -70,6 +74,25 @@
 .scrolly{
   overflow: scroll;
   height: 294px;
+}
+.back{
+  background: linear-gradient(180deg, #596bd294 0%, rgba(0, 34, 154, 0) 100%);
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  height: 100vh;
+}
+.pat-new-top{
+  border-radius: 0 0 30px 30px;
+  background: #B393F8;
+  height: 26vh;
+}
+.paitent-report {
+  max-width: 28%;
+}
+.pat-new-bot{
+
 }
 // .bg-circles {
 //   position: absolute;
