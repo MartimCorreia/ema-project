@@ -7,6 +7,16 @@
   bottom: 47.16%;
   background: #A2BBFB;
 }
+.whole-treat-show{
+  background-color: #A2BBFB;
+  height: 100vh;
+}
+.treat-show-bot{
+  background-color: #BBE6C5;
+  height: 80vh;
+
+  border-radius: 40px 40px 0px 0px;
+}
 
 .treatment-show-bot {
   background: #BBE6C5;
@@ -33,7 +43,6 @@
 .instruction-pic {
   width: 254px;
   height: 214.85px;
-  margin-bottom: 70px;
 }
 
 .protocol-instruction {
@@ -43,8 +52,7 @@
   border-radius: 20px;
   padding: 0 15px;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  margin-bottom: 78px;
-  margin-top: -20px;
+  
 }
 
 .protocol-instruction > h3 {

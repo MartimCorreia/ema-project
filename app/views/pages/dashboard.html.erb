@@ -1,74 +1,58 @@
-<div class="whole-dahs-container">
-
-  <div class="col-12">
-    <div class="dash-top">
-      <div class="profile-box d-flex flex-column align-items-center justify-content-center">
-        <%# <%= image_tag "bw-img.png" %>
-        <%= cl_image_tag current_user.photo.key, class:"avatar-place-holder" %>
-        <div class="user-info-box">
-          <h1 class="text-center">Dr. &nbsp<%=@user.first_name %> <%=@user.last_name %></h1>
-          <h6 class="text-center">(Doctor ID: #<%= @user.id %>)</h6>
+<div class="whole-dash-container">
+  <% unless controller_name == 'sessions' && action_name == 'new' || controller_name == 'pages' && action_name == 'intro' %>
+    <%= render "shared/navbar" %>
+  <% end %>
+  <div class="profile-box d-flex flex-column justify-content-center align-items-center">
+    <%= cl_image_tag current_user.photo.key, class:"avatar-place-holder" %>
+    <div class="user-info-box">
+      <h1 class="text-center">Dr. &nbsp<%=@user.first_name %> <%=@user.last_name %></h1>
+      <h6 class="text-center">(Doctor ID: #<%= @user.id %>)</h6>
+    </div>
+  </div>
+</div>
+<div class="dash-bottom2">
+  <div class="img-button-container d-flex flex-column align-items-center">
+    <div class="auto-rotate-img d-flex justify-content-center align-items-center">
+      <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active"  data-bs-interval="6000">
+            <%= image_tag "covid-banner.png", class:"banner-3 d-block" %>
+          </div>
+          <div class="carousel-item"  data-bs-interval="6000">
+            <%= image_tag "ema-banner.png", class:"banner-3 d-block" %>
+          </div>
+          <div class="carousel-item"  data-bs-interval="6000">
+            <%= image_tag "ty-banner.png", class:"banner-3 d-block" %>
+          </div>
         </div>
       </div>
     </div>
-  </div>
 
-  <div class="bot">
-    <div class="col-12">
-      <div class="dash-bottom">
-        <div class="img-button-container d-flex flex-column align-items-center">
-          <div class="auto-rotate-img d-flex justify-content-center align-items-center">
-
-            <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
-              <div class="carousel-inner">
-                <div class="carousel-item active"  data-bs-interval="6000">
-                  <%= image_tag "covid-banner.png", class:"banner-3 d-block" %>
-                </div>
-                <div class="carousel-item"  data-bs-interval="6000">
-                  <%= image_tag "ema-banner.png", class:"banner-3 d-block" %>
-                </div>
-                <div class="carousel-item"  data-bs-interval="6000">
-                  <%= image_tag "ty-banner.png", class:"banner-3 d-block" %>
-                </div>
-              </div>
-            </div>
+    <div class="dashboard-info">
+      <h5 class="pb-3">Select your task</h5>
+      <div class="btn-box d-flex align-items-center justify-content-center">
+        <div class="top-button-box">
+          <div class="start-treatment text-center treatment-box d-flex flex-column justify-content-center align-items-center">
+            <%= image_tag "new-treatment.png", class:"sticker" %>
+            <%= link_to "New treatment", treatments_path, class:"text-btn"%>
           </div>
 
-
-
-
-          <div class="dashboard-info">
-
-
-            <h5 class="pb-3">Select your task</h5>
-            <div class="btn-box d-flex align-items-center justify-content-center">
-              <div class="top-button-box">
-                <div class="start-treatment text-center treatment-box d-flex flex-column justify-content-center align-items-center">
-                  <%= image_tag "new-treatment.png", class:"sticker" %>
-                  <%= link_to "New treatment", treatments_path, class:"text-btn"%>
-                </div>
-
-                <div class="box text-center paitent-box d-flex flex-column justify-content-center align-items-center">
-                  <%= image_tag "my-paitent.png", class:"sticker" %>
-                  <%= link_to "My Patients", patients_path, class:"text-btn" %>
-                </div>
-              </div>
-
-              <div class="bot-button-box">
-                <div class="box text-center procedure-box d-flex flex-column justify-content-center align-items-center">
-                  <%= image_tag "my-procedure.png", class:"procedure-sticker" %>
-                  <%= link_to "My Procedures", procedures_path, class:"text-btn" %>
-                </div>
-                <div class="box text-center report-box d-flex flex-column justify-content-center align-items-center">
-                  <%= image_tag "my-report.png", class:"report-sticker" %>
-                  <%= link_to "My Reports", medical_reports_path, class:"text-btn" %>
-                </div>
-              </div>
-            </div>
-
+          <div class="box text-center paitent-box d-flex flex-column justify-content-center align-items-center">
+            <%= image_tag "my-paitent.png", class:"sticker" %>
+            <%= link_to "My Patients", patients_path, class:"text-btn" %>
           </div>
         </div>
 
+        <div class="bot-button-box">
+          <div class="box text-center procedure-box d-flex flex-column justify-content-center align-items-center">
+            <%= image_tag "my-procedure.png", class:"procedure-sticker" %>
+            <%= link_to "My Procedures", procedures_path, class:"text-btn" %>
+          </div>
+          <div class="box text-center report-box d-flex flex-column justify-content-center align-items-center">
+            <%= image_tag "my-report.png", class:"report-sticker" %>
+            <%= link_to "My Reports", medical_reports_path, class:"text-btn" %>
+          </div>
+        </div>
       </div>
     </div>
   </div>
