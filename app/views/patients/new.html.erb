@@ -1,10 +1,14 @@
-<div class="whole-paitent-container">
-  <div class="paitent-info-top d-flex justify-content-center align-items-center">
-    <%= image_tag "paitent-info.png", class:"paitent-report" %>
+<div class="back">
+  <div class="pat-new-top">
+    <% unless controller_name == 'sessions' && action_name == 'new' || controller_name == 'pages' && action_name == 'intro' %>
+      <%= render "shared/navbar" %>
+    <% end %>
+    <div class="pat-icon d-flex justify-content-center">
+      <%= image_tag "paitent-info.png", class:"paitent-report" %>
+    </div>
   </div>
-
-  <div class="paitent-info-bot">
-    <div class="paitent-container mt-4">
+  <div class="pat-new-bot">
+    <div class="paitent-container d-flex justify-content-center mt-2">
       <div class="paitent-form-box d-flex flex-column align-items-center justify-content-center">
         <h1 class="text-center">Patient Info</h1>
         <%= simple_form_for [@treatment, @patient] do |f| %>
