@@ -3,7 +3,9 @@
     <%= render "shared/navbar" %>
   <% end %>
   <div class="profile-box d-flex flex-column justify-content-center align-items-center">
+
     <%= cl_image_tag current_user.photo.key, class:"avatar-place-holder" %>
+  
     <div class="user-info-box">
       <h1 class="text-center">Dr. &nbsp<%=@user.first_name %> <%=@user.last_name %></h1>
       <h6 class="text-center">(Doctor ID: #<%= @user.id %>)</h6>
