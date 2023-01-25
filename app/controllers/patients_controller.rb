@@ -15,10 +15,8 @@ class PatientsController < ApplicationController
   end
 
   def new
-
     @treatment = Treatment.find(params[:treatment_id])
     @patient = Patient.new
-
   end
 
   def create
