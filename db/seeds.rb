@@ -17,17 +17,7 @@ InjuryType.destroy_all
 InjuryLocation.destroy_all
 
 puts "creating users..."
-file = URI.open("https://res.cloudinary.com/dluisdviu/image/upload/v1662557885/EMA/users/naughty-luis_ks6wwt.png")
-user1 = User.new(first_name:"Luis", last_name:"Campos", email:"luis@mail.com", password: "123123" )
-user1.photo.attach(io: file, filename: "Luis", content_type:"image/png")
-user1.save
-
-file = URI.open("https://res.cloudinary.com/dluisdviu/image/upload/v1662557885/EMA/users/naughty-martim_ofjnfj.png")
-user2 = User.new(first_name:"Martim", last_name:"Correia", email:"martim@mail.com", password: "123123" )
-user2.photo.attach(io: file, filename: "Martim", content_type:"image/png")
-user2.save
-
-file = URI.open("https://res.cloudinary.com/dluisdviu/image/upload/v1662557885/EMA/users/bw-img_f9s36n.png")
+file = URI.open("https://res.cloudinary.com/diptdeclw/image/upload/v1675757534/production/bryan_ocoigx.png")
 user3 = User.new(first_name:"Bryan", last_name:"Wong", email:"bryan@mail.com", password: "123123" )
 user3.photo.attach(io: file, filename: "Bryan", content_type:"image/png")
 user3.save
